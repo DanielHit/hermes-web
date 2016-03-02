@@ -8,70 +8,89 @@
     <title>闪电聘, 找工作, 蓝领求职, 求职</title>
     {% include "header.html" %}
     <!-- Bootstrap -->
-
 </head>
 
 <body>
 
-<h1>闪电聘</h1>
+<div class="navbar-wrapper">
+    <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">闪电招聘</a>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">主页</a></li>
+                        <li><a href="#about">找工作</a></li>
+                        <li><a href="#contact">发布信息</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">工作台 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+    </div>
+</div>
+
+<div>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="岗位: 如 销售" aria-describedby="basic-addon2">
+        <span class="input-group-addon" id="basic-addon2">搜索</span>
+    </div>
+</div>
+
 <div id="sidebar" class="sidebar">
     <div class="mainNavs">
+
         <div class="menu_box">
             <div class="menu_main job_hopping">
                 <h2>
-                    技术
-                    <!-- 跳槽月 -->
+                    餐饮行业
                     <span></span>
                 </h2>
 
 
                 <a href="http://www.lagou.com/zhaopin/Java/" data-lg-tj-id="4A00" data-lg-tj-no="0001"
-                   data-lg-tj-cid="idnull">Java</a>
+                   data-lg-tj-cid="idnull">服务员</a>
 
 
                 <a href="http://www.lagou.com/zhaopin/PHP/" data-lg-tj-id="4A00" data-lg-tj-no="0002"
-                   data-lg-tj-cid="idnull">PHP</a>
+                   data-lg-tj-cid="idnull">厨师</a>
 
 
                 <a href="http://www.lagou.com/zhaopin/C/" data-lg-tj-id="4A00" data-lg-tj-no="0003"
-                   data-lg-tj-cid="idnull">C</a>
+                   data-lg-tj-cid="idnull">送餐员</a>
 
 
                 <a href="http://www.lagou.com/zhaopin/C++/" data-lg-tj-id="4A00" data-lg-tj-no="0004"
-                   data-lg-tj-cid="idnull">C++</a>
-
-
-                <a href="http://www.lagou.com/zhaopin/Android/" data-lg-tj-id="4A00" data-lg-tj-no="0005"
-                   data-lg-tj-cid="idnull">Android</a>
-
-
-                <a href="http://www.lagou.com/zhaopin/iOS/" data-lg-tj-id="4A00" data-lg-tj-no="0006"
-                   data-lg-tj-cid="idnull">iOS</a>
-
-
-                <a href="http://www.lagou.com/zhaopin/ceshi/" data-lg-tj-id="4A00" data-lg-tj-no="0007"
-                   data-lg-tj-cid="idnull">测试</a>
-
-
-                <a href="http://www.lagou.com/zhaopin/qianduankaifa/" data-lg-tj-id="4A00" data-lg-tj-no="0008"
-                   data-lg-tj-cid="idnull">前端开发</a>
-
-
-                <a href="http://www.lagou.com/zhaopin/jishujingli/" data-lg-tj-id="4A00" data-lg-tj-no="0009"
-                   data-lg-tj-cid="idnull">技术经理</a>
-
-
-                <a href="http://www.lagou.com/zhaopin/jishuzongjian/" data-lg-tj-id="4A00" data-lg-tj-no="0010"
-                   data-lg-tj-cid="idnull">技术总监</a>
-
-
-                <a href="http://www.lagou.com/zhaopin/jiagoushi/" data-lg-tj-id="4A00" data-lg-tj-no="0011"
-                   data-lg-tj-cid="idnull">架构师</a>
-
-
-                <a href="http://www.lagou.com/zhaopin/CTO/" data-lg-tj-id="4A00" data-lg-tj-no="0012"
-                   data-lg-tj-cid="idnull">CTO</a>
+                   data-lg-tj-cid="idnull">卫生员工</a>
             </div>
+
+            <!--下面是隐藏的部分的展示样式-->
             <div class="menu_sub dn" style="top: 0px;">
                 <dl>
                     <dt>
@@ -594,6 +613,7 @@
                     </dd>
                 </dl>
             </div>
+
         </div>
     </div>
 
