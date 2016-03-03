@@ -2,6 +2,7 @@ body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     margin: 0;
+   font-color: #5e5e5e;
 }
 
 a {
@@ -90,4 +91,12 @@ a {
 .content-secondary {
 . make-lg-column(3);
 . make-lg-column-offset(1);
+}
+
+.jobs-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 4px;
 }
