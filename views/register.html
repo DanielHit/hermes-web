@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闪电聘-招聘</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>闪电聘</title>
+    {% include "header.html" %}
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+<div class="container" style="padding-top: 10%">
+
+    <div class="col-md-3"></div>
+
+    <div class="col-md-6">
+
+        <form class="form-signin">
+            <div class="row">
+                <h2 class="form-signin-heading" style="text-align: center;padding-bottom: 35px">注册闪电聘,从此与众不同!</h2>
+                <label for="inputEmail" class="sr-only" style="text-align: center">请输入手机号</label>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" id="inputEmail" class="form-control" placeholder="请输入手机号" required=""
+                           autofocus="">
+                    <label for="inputPassword" class="sr-only">获取验证码</label>
+                </div>
+                <div class="col-md-8" style="padding-top: 3px;">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="获取验证码" required="">
+                </div>
+                <div class="col-md-4" style="padding-top: 3px;">
+                    <button class="btn  btn-warning btn-block" type="submit">发送验证码</button>
+                </div>
+
+                <div class="col-md-6" style="padding-top: 3px;">
+                    <button class="btn  btn-primary btn-block" type="submit">求  职</button>
+                </div>
+
+                <div class="col-md-6" style="padding-top: 3px;">
+                    <button class="btn  btn-default btn-block" type="submit">招  聘</button>
+                </div>
+
+
+                <div class="col-md-12" style="padding-top: 15px;">
+                    <button class="btn  btn-primary btn-block" type="submit">一键注册</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="col-md-3"></div>
+</div>
+
+</body>
+</html>
