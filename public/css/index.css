@@ -31,7 +31,7 @@ a {
 
 #search-button {
     padding: 1px;
-    width:100px;
+    width: 100px;
     background-color: #2196f3;
     color: #ffffff;
 }
@@ -61,4 +61,33 @@ a {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.col-red {
+    background-color: #8c8c8c;
+}
+
+.foot-nav {
+    margin-top: 10px;
+}
+
+.foot-desc {
+    background-color: #999999;
+}
+
+.col-border {
+    border-style: solid;
+}
+
+.wrapper {
+. make-row();
+}
+
+.content-main {
+. make-lg-column(8);
+}
+
+.content-secondary {
+. make-lg-column(3);
+. make-lg-column-offset(1);
 }
