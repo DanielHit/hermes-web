@@ -1,64 +1,64 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
-    <!--<link rel="stylesheet" href="/css/widgets.css">-->
 </head>
 
 <body>
 <div class="container-fluid">
-    <div class="row">
-        <div class="navbar-wrapper navbar-fixed-top navbar-inverse">
+    <div class="navbar-wrapper navbar-fixed-top navbar-inverse">
+        <div class="container">
 
-            <div class="container">
-                <nav class="navbar navbar-inverse navbar-static-top">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                    data-target="#navbar"
-                                    aria-expanded="false" aria-controls="navbar">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="/index">闪电招聘</a>
-                        </div>
-
-                        <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
-                                <!--<li class="active"><a href="/index">主页</a></li>-->
-                                <li><a href="/index">找工作</a></li>
-                                <li><a href="/company">发布信息</a></li>
-                                <li><a href="/login">登录</a></li>
-                                <li><a href="/register">注册</a></li>
-                                <!--登录之后显示的工作台-->
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                       aria-haspopup="true" aria-expanded="false">工作台 <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li class="dropdown-header">Nav header</li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar"
+                                aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/index" style="font-size: 30px; text-align: center">闪电招聘</a>
                     </div>
-                </nav>
 
-            </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+
+                        <ul class="nav navbar-nav navbar-left">
+                            <li><a href="/index">找工作</a></li>
+                            <li><a href="/company">发布信息</a></li>
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">个人中心 <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">简历中心</a></li>
+                                    <li><a href="#">申请记录</a></li>
+                                    <li><a href="#">个人信箱</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">操作</li>
+                                    <li><a href="/help">帮助</a></li>
+                                    <li><a href="/logout">退出</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/register" style="float: left;">注册</a></li>
+                            <li><a href="/login" style="float: left;">登录</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+
         </div>
     </div>
 </div>
 
-<script src="/public/js/bootstrap.min.js"></script>
-<script src="/public/js/jquery.min.js"></script>
+
+<!--bootstrap的Js需要jquery 需要放置在 jquery后面-->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 </body>
 
 
