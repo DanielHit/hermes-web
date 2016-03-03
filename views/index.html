@@ -15,48 +15,48 @@
 <div class="container-fluid">
 
     <!--<div class="row">-->
-        <!--<div class="navbar-wrapper navbar-fixed-top navbar-inverse">-->
-            <!--<div class="container">-->
-                <!--<nav class="navbar navbar-inverse navbar-static-top">-->
-                    <!--<div class="container">-->
-                        <!--<div class="navbar-header">-->
-                            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"-->
-                                    <!--data-target="#navbar"-->
-                                    <!--aria-expanded="false" aria-controls="navbar">-->
-                                <!--<span class="sr-only">Toggle navigation</span>-->
-                                <!--<span class="icon-bar"></span>-->
-                                <!--<span class="icon-bar"></span>-->
-                                <!--<span class="icon-bar"></span>-->
-                            <!--</button>-->
-                            <!--<a class="navbar-brand" href="#">闪电招聘</a>-->
-                        <!--</div>-->
+    <!--<div class="navbar-wrapper navbar-fixed-top navbar-inverse">-->
+    <!--<div class="container">-->
+    <!--<nav class="navbar navbar-inverse navbar-static-top">-->
+    <!--<div class="container">-->
+    <!--<div class="navbar-header">-->
+    <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"-->
+    <!--data-target="#navbar"-->
+    <!--aria-expanded="false" aria-controls="navbar">-->
+    <!--<span class="sr-only">Toggle navigation</span>-->
+    <!--<span class="icon-bar"></span>-->
+    <!--<span class="icon-bar"></span>-->
+    <!--<span class="icon-bar"></span>-->
+    <!--</button>-->
+    <!--<a class="navbar-brand" href="#">闪电招聘</a>-->
+    <!--</div>-->
 
-                        <!--<div id="navbar" class="navbar-collapse collapse">-->
-                            <!--<ul class="nav navbar-nav">-->
-                                <!--<li class="active"><a href="#">主页</a></li>-->
-                                <!--<li><a href="#about">找工作</a></li>-->
-                                <!--<li><a href="#contact">发布信息</a></li>-->
-                                <!--<li class="dropdown">-->
-                                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
-                                       <!--aria-haspopup="true" aria-expanded="false">工作台 <span class="caret"></span></a>-->
-                                    <!--<ul class="dropdown-menu">-->
-                                        <!--<li><a href="#">Action</a></li>-->
-                                        <!--<li><a href="#">Another action</a></li>-->
-                                        <!--<li><a href="#">Something else here</a></li>-->
-                                        <!--<li role="separator" class="divider"></li>-->
-                                        <!--<li class="dropdown-header">Nav header</li>-->
-                                        <!--<li><a href="#">Separated link</a></li>-->
-                                        <!--<li><a href="#">One more separated link</a></li>-->
-                                    <!--</ul>-->
-                                <!--</li>-->
-                            <!--</ul>-->
-                        <!--</div>-->
+    <!--<div id="navbar" class="navbar-collapse collapse">-->
+    <!--<ul class="nav navbar-nav">-->
+    <!--<li class="active"><a href="#">主页</a></li>-->
+    <!--<li><a href="#about">找工作</a></li>-->
+    <!--<li><a href="#contact">发布信息</a></li>-->
+    <!--<li class="dropdown">-->
+    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
+    <!--aria-haspopup="true" aria-expanded="false">工作台 <span class="caret"></span></a>-->
+    <!--<ul class="dropdown-menu">-->
+    <!--<li><a href="#">Action</a></li>-->
+    <!--<li><a href="#">Another action</a></li>-->
+    <!--<li><a href="#">Something else here</a></li>-->
+    <!--<li role="separator" class="divider"></li>-->
+    <!--<li class="dropdown-header">Nav header</li>-->
+    <!--<li><a href="#">Separated link</a></li>-->
+    <!--<li><a href="#">One more separated link</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</div>-->
 
-                    <!--</div>-->
-                <!--</nav>-->
+    <!--</div>-->
+    <!--</nav>-->
 
-            <!--</div>-->
-        <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
     <!--</div>-->
 
     <div class="row" style="padding-top: 5%">
@@ -113,6 +113,7 @@
             </div>
 
             <div class="col-md-9">
+                <!--搜索-->
                 <div class="row">
                     <form class="form-group"></form>
                     <div class="form-group">
@@ -124,11 +125,10 @@
                         </div>
                     </div>
                 </div>
+
+                <!--筛选-->
                 <div class="row" style="padding-top: 5px">
                     <div class="form-group">
-                        <div class="col-md-1">
-                            <label style="padding:10%;text-align: center">筛选</label>
-                        </div>
                         <div class="col-md-2">
                             <select class="form-control col-md-2">
                                 <option>薪资</option>
@@ -175,16 +175,30 @@
 
                     </div>
                 </div>
-                <!--接口动态生成-->
-                <div class="row job-list-container">
-                    <ul class="jobs-list">
-                        <li>
-                            <a href="/jobs/pWveY2dGjnEH64jW7/b2b-outside-sales-executive-lava-networks-inc">
-                                <h2>酒店服务员</h2>
-                                <small>Secondary text</small>
-                            </a>
-                        </li>
-                    </ul>
+
+                <!--职位列表-->
+                <div class="list-group" style="padding-top: 20px">
+
+                    <a href="/jobdesc?id=12434" class="list-group-item">
+                        <h4 class="list-group-item-heading">酒店服务员
+                            <small>3000-5000</small>
+                        </h4>
+                        <p class="list-group-item-text" style="padding-top: 3px">包吃包住,非常便宜</p>
+                    </a>
+
+                    <a href="/jobdec?id=12345" class="list-group-item">
+                        <h4 class="list-group-item-heading">快递员
+                            <small>5000-6000</small>
+                        </h4>
+                        <p class="list-group-item-text" style="padding-top: 3px">美团公司直招外卖快递员</p>
+                    </a>
+
+                    <a href="/jobdec?id=12345" class="list-group-item">
+                        <h4 class="list-group-item-heading">厨师
+                            <small>6000-8000</small>
+                        </h4>
+                        <p class="list-group-item-text" style="padding-top: 3px">好企业,提供厨师师傅的更好的平台</p>
+                    </a>
                 </div>
             </div>
 
