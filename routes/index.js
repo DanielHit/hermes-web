@@ -23,10 +23,13 @@ router.get('/jd', function (req, res, next) {
 });
 
 
-
-
 router.get('/test', function (req, res, next) {
     res.render('test');
 });
+
+router.get('/post', function (req, res, next) {
+    res.render('post');
+});
+
 
 module.exports = router;

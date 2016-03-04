@@ -28,5 +28,11 @@
 
 .job-supply-position {
     position: relative;
+}
 
+.job-welfare {
+    margin-top: 4px;;
+    border-buttom-style: solid;
+    border-buttom-width: 1.5px;
+    border-buttom-color: rgba(94, 94, 94, 0.28);
 }
