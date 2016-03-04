@@ -13,9 +13,11 @@
 <div class="container-fluid post-container-style">
 
     <div class="panel panel-primary panel-sm">
+
         <div class="panel-heading">
             <h5>职位描述</h5>
         </div>
+
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-6">
@@ -34,6 +36,30 @@
                         </select>
                     </div>
                 </div>
+
+                <div class="col-md-12 text-space">
+                    <h5>填写具体的岗位信息</h5>
+                    <textarea class="form-control" placeholder="岗位具体描述" rows="3"></textarea>
+                </div>
+
+                <div class="col-md-12 text-space" >
+                    <h5>介绍公司与团队</h5>
+                    <textarea class="form-control" placeholder="具体公司介绍" rows="3"></textarea>
+                </div>
+
+                <div class="col-md-6 text-space" >
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon" id="sizing-addon3">职位类型</span>
+
+                        <label class="checkbox-inline" >
+                            <input type="checkbox" id="inlineCheckbox1" value="option1"> 全职
+                        </label>
+                        <label class="checkbox-inline ">
+                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 兼职
+                        </label>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -41,14 +67,24 @@
     <!--职位福利待遇-->
     <div class="panel panel-primary panel-sm">
         <div class="panel-heading">
-            <h5>职位福利</h5>
+            <h5>工资与福利</h5>
         </div>
-        <div class="panel-body">
-            <checkbox>包吃</checkbox>
-            <checkbox>包住</checkbox>
-            <checkbox>双休</checkbox>
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text">
+            </div>
+            <div class="col-md-6">
+                <input type="text">
+            </div>
+            <div class="col-md-12">
+                <h4>福利</h4>
+                <label class="pop-input-label" >福利</label>
+                <div class="panel-body">
+                    <input class="group-checkbox bonuses select-one-item" type="checkbox">
+                </div>
+            </div>
         </div>
-        <!--<div class="panel-footer">Panel footer</div>-->
+        <div class="panel-footer">Panel footer</div>
     </div>
 
     <!--职位地址-->
