@@ -27,9 +27,8 @@ router.get('/test', function (req, res, next) {
     res.render('test');
 });
 
-router.get('/post', function (req, res, next) {
-    res.render('post');
+router.get('/postjob', function (req, res, next) {
+    res.render('postjob');
 });
-
 
 module.exports = router;
