@@ -18,5 +18,11 @@
 .text-space {
     text-align: left;
     padding-top: 8px;
+
+}
+
+.benefits-box {
+    padding-left:10px;
+    font-size: medium;
 }
 
