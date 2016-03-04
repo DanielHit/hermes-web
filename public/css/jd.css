@@ -1,0 +1,32 @@
+.img {
+    vertical-align: middle;
+}
+
+.container-type {
+    padding-top: 2%;
+    padding-left: 5%;
+    margin-left: 2%;
+    margin-top: 1%;
+    padding-bottom: 5px;
+    padding-rigth: 2%;
+}
+
+.user-avatar-wrapper {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    backgroud-color: #FFFFFF;
+    overflow: hidden;
+    display: block;
+}
+
+.panel-top-border {
+    border-top-style: solid;
+    border-top-width: 1.5px;
+    border-top-color: rgba(94, 94, 94, 0.28);
+}
+
+.job-supply-position {
+    position: relative;
+
+}
