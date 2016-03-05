@@ -101,10 +101,32 @@
 
 <style>
     .sidebar .current {
-        background: #fff
-        border: 2px solid #c9cbce
-        border-right: 0
-        z-index: 102
+        background: #fff;
+        border: 2px solid #fafafa;
+        border-right: 0;
+    }
+    .sidebar .menu_main a {
+        color: #555;
+        background-color: transparent;
+        text-decoration: none;
+        float: left;
+        white-space: nowrap;
+        margin: 0 5px 5px 0;
+        padding: 0 8px;
+    }
+    .sidebar .menu_sub dt a {
+        line-height: 28px;
+        text-decoration: underline;
+        white-space: nowrap;
+        color: #777;
+        margin-left: -1px;
+    }
+    .sidebar .menu_sub dd a {
+        line-height: 28px;
+        text-decoration: none;
+        white-space: nowrap;
+        color: #777;
+        margin-left: -1px;
     }
     .dn {
         display: none;
@@ -144,7 +166,7 @@
     })
 </script>
 <div class="sidebar">
-    <div class="row" style="height: 1000px;">
+    <div class="row">
         <div class="menu_main job_hopping col-md-3">
             <h2>
                 技术
