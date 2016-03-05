@@ -14,32 +14,22 @@ router.get('/application', function (req, res, next) {
 });
 
 router.get('/applicationJson', function (req, res, next) {
-    var data = [
-        {
-            modified: '2015年1月1日',
+    var data = new Array();
+    var list = new Array();
+    for(var i = 0; i < 100; i ++ ){
+        list.push(i);
+    }
+    list.forEach(function(e) {
+        data.push({
+            modified: '2015年1月' + (10 - e) + '日',
             job: '地推',
             recruiter: '王经理',
             company: '美团',
             progress: '未阅读',
             status: '已投递',
-            postTime: '3天'
-        },{
-            modified: '2015年1月2日',
-            job: '地推',
-            recruiter: '王经理',
-            company: '美团',
-            progress: '未阅读',
-            status: '已投递',
-            postTime: '3天'
-        },{
-            modified: '2015年3月1日',
-            job: '地推',
-            recruiter: '李经理',
-            company: '点评',
-            progress: '未阅读',
-            status: '已投递',
-            postTime: '1天'
-        },]
+            postTime: e + '天'
+        })
+    })
     res.send(data)
 })
 module.exports = router;
