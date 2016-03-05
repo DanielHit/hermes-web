@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>闪电聘-招聘</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>申请记录查看</title>
+    {% include "../header.html" %}
+    <link rel="stylesheet" href="/css/users/application.css">
+    <link rel="stylesheet" href="/css/lib/bootstrap-table.min.css">
 </head>
 <body>
 
+<style>
+    .sidebar {
+
+    }
+    .sidebar li {
+        /*border: 1px solid #cccccc;*/
+    }
+</style>
+<div class="container" style="margin-top: 10%">
+    <div class="col-md-2">
+        <ul class="list-group sidebar" style="margin-top: 35%">
+            <li class="list-group-item"><a href="#">简历管理</a></li>
+            <li class="list-group-item"><a href="#">投递记录</a></li>
+            <li class="list-group-item"><a href="#">我的收藏</a></li>
+            <li class="list-group-item">
+                <a href="#">我的信箱</a>
+                <span class="label label-default label-pill pull-xs-right">1</span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <div class="col-md-12">
+            <table class="table table-striped" id="table"
+                   data-search="true"
+                    >
+            </table>
+        </div>
+    </div>
+</div>
+<script src="/js/lib/bootstrap-table.min.js"></script>
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/locale/bootstrap-table-zh-CN.min.js"></script>-->
+
+<script src="/js/users/application.js"></script>
 </body>
 </html>
