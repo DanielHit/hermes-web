@@ -24,4 +24,8 @@ router.get('/position', function (req, res, next) {
     res.render("company/position");
 });
 
+router.get('/waiting', function (req, res, next) {
+    res.render("company/waiting");
+});
+
 module.exports = router;
