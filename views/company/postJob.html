@@ -11,230 +11,231 @@
 </head>
 
 <body>
-<div class="container-fluid post-container-style">
-    <div class="col-sm-3 col-md-2 sidebar">
-        <ul class="nav nav-sidebar">
-            <li class="active"><a href="http://v3.bootcss.com/examples/dashboard/#">管理中心 <span class="sr-only">(current)</span></a>
-            </li>
-            <li><a href="/postjob"><b>新发布职位</b></a></li>
-            <li><a href="http://v3.bootcss.com/examples/dashboard/#">已发布岗位</a></li>
-            <li><a href="http://v3.bootcss.com/examples/dashboard/#">候选人状况</a></li>
-            <li><a href="http://v3.bootcss.com/examples/dashboard/#"></a></li>
-        </ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="http://v3.bootcss.com/examples/dashboard/#">管理中心 <span class="sr-only">(current)</span></a>
+                </li>
+                <li><a href="/company/postjob"><b>新发布职位</b></a></li>
+                <li><a href="http://v3.bootcss.com/examples/dashboard/#">已发布岗位</a></li>
+                <li><a href="http://v3.bootcss.com/examples/dashboard/#">候选人状况</a></li>
+                <li><a href="http://v3.bootcss.com/examples/dashboard/#"></a></li>
+            </ul>
 
-        <!--这就是尼玛 赚企业钱的地方啊!!!! -> 设计不同的企业解决方案-->
-        <ul class="nav nav-sidebar">
-            <li class="active"><a href="">招聘宝</a></li>
-            <li><a href="">招聘广告</a></li>
-            <li><a href="">精准推荐</a></li>
-            <li><a href="">企业人力SaaS系统</a></li>
-            <li><a href="">人才分析</a></li>
-        </ul>
+            <!--这就是尼玛 赚企业钱的地方啊!!!! -> 设计不同的企业解决方案-->
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="">招聘宝</a></li>
+                <li><a href="">招聘广告</a></li>
+                <li><a href="">精准推荐</a></li>
+                <li><a href="">企业人力SaaS系统</a></li>
+                <li><a href="">人才分析</a></li>
+            </ul>
 
-    </div>
-
-    <!--职位描述-->
-    <div class="panel panel-default panel-sm">
-        <div class="panel-heading">
-            <h5>职位描述</h5>
         </div>
 
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="input-group input-group-sm">
-                        <span class="input-group-addon" id="sizing-addon1">职位名称</span>
-                        <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+        <!--职位描述-->
+        <div class="panel panel-default panel-sm">
+            <div class="panel-heading">
+                <h5>职位描述</h5>
+            </div>
+
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon1">职位名称</span>
+                            <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-6">
-                    <div class="input-group input-group-sm">
-                        <span class="input-group-addon" id="sizing-addon2">所属行业</span>
-                        <select name="industy" id="industy" class="form-control">
-                            <option value="sales">餐饮</option>
-                            <option value="manufactor">制造</option>
-                        </select>
+                    <div class="col-md-6">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon2">所属行业</span>
+                            <select name="industy" id="industy" class="form-control">
+                                <option value="sales">餐饮</option>
+                                <option value="manufactor">制造</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-12 text-space">
-                    <h5>填写具体的岗位信息</h5>
-                    <textarea class="form-control" placeholder="岗位具体描述" rows="3"></textarea>
-                </div>
-
-                <div class="col-md-12 text-space">
-                    <h5>介绍公司与团队</h5>
-                    <textarea class="form-control" placeholder="具体公司介绍" rows="3"></textarea>
-                </div>
-
-                <div class="col-md-6 text-space">
-                    <div class="input-group input-group-sm">
-                        <span class="input-group-addon" id="sizing-addon3">职位类型</span>
-                        <select name="industy" id="jobType" class="form-control">
-                            <option value="sales">全职</option>
-                            <option value="manufactor">兼职</option>
-                        </select>
+                    <div class="col-md-12 text-space">
+                        <h5>填写具体的岗位信息</h5>
+                        <textarea class="form-control" placeholder="岗位具体描述" rows="3"></textarea>
                     </div>
-                </div>
 
-            </div>
-        </div>
-    </div>
+                    <div class="col-md-12 text-space">
+                        <h5>介绍公司与团队</h5>
+                        <textarea class="form-control" placeholder="具体公司介绍" rows="3"></textarea>
+                    </div>
 
-    <!--职位福利待遇-->
-    <div class="panel panel-default panel-sm">
-        <div class="panel-heading">
-            <h5>工资与福利</h5>
-        </div>
-        <div class="col-md-12 text-space">
-            <div class="form-group">
-                <div class="col-md-6">
-                    <h5>范围</h5>
-                    <select type="text" class="form-control" id="exampleInputName2">
-                        <option value="">1000元以下</option>
-                        <option value="">1000-2000</option>
-                        <option value="">2000-3000</option>
-                        <option value="">3000-5000</option>
-                        <option value="">5000-8000</option>
-                        <option value="">8000-12000</option>
-                        <option value="">12000-20000</option>
-                        <option value="">20000-25000</option>
-                        <option value="">25000以上</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <h5>计费方式</h5>
-                    <select type="text" class="form-control" id="exampleInputName3">
-                        <option value="">月薪</option>
-                        <option value="">日结</option>
-                        <option value="">时薪</option>
-                    </select>
+                    <div class="col-md-6 text-space">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3">职位类型</span>
+                            <select name="industy" id="jobType" class="form-control">
+                                <option value="sales">全职</option>
+                                <option value="manufactor">兼职</option>
+                            </select>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <h5 style="text-align: left; padding-left: 30px">福利</h5>
-
-                <label class="benefits-box">
-                    <input type="checkbox"> 五险一金
-                </label>
-
-                <label class="benefits-box">
-                    <input type="checkbox"> 周末双休
-                </label>
-
-                <label class="benefits-box">
-                    <input type="checkbox"> 包吃
-                </label>
-
-                <label class="benefits-box">
-                    <input type="checkbox"> 包住
-                </label>
-                <hr>
-                <label class="benefits-box">
-                    <input type="checkbox"> 年底双薪
-                </label>
-
-                <label class="benefits-box">
-                    <input type="checkbox"> 交通补助
-                </label>
-
-                <label class="benefits-box">
-                    <input type="checkbox"> 加班补助
-                </label>
-
-                <label class="benefits-box">
-                    <input type="checkbox"> 饭补
-                </label>
-
-                <label class="benefits-box">
-                    <input type="checkbox"> 话补
-                </label>
-
-                <label class="benefits-box">
-                    <input type="checkbox"> 房补
-                </label>
-
-
+        <!--职位福利待遇-->
+        <div class="panel panel-default panel-sm">
+            <div class="panel-heading">
+                <h5>工资与福利</h5>
             </div>
-            <div class="col-md-12">
-
-            </div>
-        </div>
-        <!--<div class="panel-footer">Panel footer</div>-->
-    </div>
-
-    <!--职位地址-->
-    <div class="panel panel-default panel-sm">
-        <div class="panel-heading">
-            <h5>职位地址</h5>
-        </div>
-        <div class="panel-body">
             <div class="col-md-12 text-space">
                 <div class="form-group">
                     <div class="col-md-6">
                         <h5>范围</h5>
-                        <select type="text" class="form-control" id="">
-                            <option value="">北京</option>
-                            <option value="">上海</option>
-                            <option value="">天津</option>
+                        <select type="text" class="form-control" id="exampleInputName2">
+                            <option value="">1000元以下</option>
+                            <option value="">1000-2000</option>
+                            <option value="">2000-3000</option>
+                            <option value="">3000-5000</option>
+                            <option value="">5000-8000</option>
+                            <option value="">8000-12000</option>
+                            <option value="">12000-20000</option>
+                            <option value="">20000-25000</option>
+                            <option value="">25000以上</option>
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <h5>区域</h5>
-                        <select type="text" class="form-control" id="">
-                            <option value="">朝阳</option>
-                            <option value="">望京</option>
-                            <option value="">天通苑</option>
+                        <h5>计费方式</h5>
+                        <select type="text" class="form-control" id="exampleInputName3">
+                            <option value="">月薪</option>
+                            <option value="">日结</option>
+                            <option value="">时薪</option>
                         </select>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!--职位图片 todo 还未想好是否需要加上岗位图片信息-->
-    <!--<div class="panel panel-primary panel-sm">-->
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 style="text-align: left; padding-left: 30px">福利</h5>
+
+                    <label class="benefits-box">
+                        <input type="checkbox"> 五险一金
+                    </label>
+
+                    <label class="benefits-box">
+                        <input type="checkbox"> 周末双休
+                    </label>
+
+                    <label class="benefits-box">
+                        <input type="checkbox"> 包吃
+                    </label>
+
+                    <label class="benefits-box">
+                        <input type="checkbox"> 包住
+                    </label>
+                    <hr>
+                    <label class="benefits-box">
+                        <input type="checkbox"> 年底双薪
+                    </label>
+
+                    <label class="benefits-box">
+                        <input type="checkbox"> 交通补助
+                    </label>
+
+                    <label class="benefits-box">
+                        <input type="checkbox"> 加班补助
+                    </label>
+
+                    <label class="benefits-box">
+                        <input type="checkbox"> 饭补
+                    </label>
+
+                    <label class="benefits-box">
+                        <input type="checkbox"> 话补
+                    </label>
+
+                    <label class="benefits-box">
+                        <input type="checkbox"> 房补
+                    </label>
+
+
+                </div>
+                <div class="col-md-12">
+
+                </div>
+            </div>
+            <!--<div class="panel-footer">Panel footer</div>-->
+        </div>
+
+        <!--职位地址-->
+        <div class="panel panel-default panel-sm">
+            <div class="panel-heading">
+                <h5>职位地址</h5>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-12 text-space">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <h5>范围</h5>
+                            <select type="text" class="form-control" id="">
+                                <option value="">北京</option>
+                                <option value="">上海</option>
+                                <option value="">天津</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>区域</h5>
+                            <select type="text" class="form-control" id="">
+                                <option value="">朝阳</option>
+                                <option value="">望京</option>
+                                <option value="">天通苑</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--职位图片 todo 还未想好是否需要加上岗位图片信息-->
+        <!--<div class="panel panel-primary panel-sm">-->
         <!--<div class="panel-heading">-->
-            <!--<h5>职位图片</h5>-->
+        <!--<h5>职位图片</h5>-->
         <!--</div>-->
         <!--<div class="map">-->
         <!--</div>-->
-    <!--</div>-->
+        <!--</div>-->
 
-    <!--招聘负责人-->
-    <div class="panel panel-default panel-sm">
-        <div class="panel-heading">
-            <h5>招聘者信息</h5>
+        <!--招聘负责人-->
+        <div class="panel panel-default panel-sm">
+            <div class="panel-heading">
+                <h5>招聘者信息</h5>
+            </div>
+            <div class="panel-body" style="text-align:left">
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="text-space">姓名*</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="text-space">职位*</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="人力总监">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="text-space">电话*</label>
+                    <input type="tel" class="form-control" id="phoneNum" placeholder="手机号">
+                </div>
+            </div>
         </div>
-        <div class="panel-body" style="text-align:left">
-            <div class="form-group">
-                <label for="exampleInputEmail1" class="text-space">姓名*</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1" class="text-space">职位*</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="人力总监">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1" class="text-space">电话*</label>
-                <input type="tel" class="form-control" id="phoneNum" placeholder="手机号">
+
+        <!--提交-->
+        <div class="panel panel-default panel-sm">
+            <div class="panel-body">
+                <button class="btn btn-success">发布</button>
+                <button class="btn btn-danger">删除</button>
             </div>
         </div>
+
     </div>
-
-    <!--提交-->
-    <div class="panel panel-default panel-sm">
-        <div class="panel-body">
-            <button class="btn btn-success">发布</button>
-            <button class="btn btn-danger">删除</button>
-        </div>
-    </div>
-
-
 
 </div>
 </body>
