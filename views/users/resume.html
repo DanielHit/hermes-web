@@ -9,59 +9,45 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>闪电聘</title>
     {% include "../header.html" %}
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/resume.css">
     <link rel="stylesheet" href="/css/common.css">
 </head>
 <body>
 
 <div class="container pannel-container-style">
-    <!--职位描述-->
-    <div class="panel panel-primary panel-sm" >
 
-
+    <!--头像 和 姓名-->
+    <div class="panel panel-default panel-sm">
         <div class="panel-body">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="input-group input-group-sm">
-                        <span class="input-group-addon" id="sizing-addon1">职位名称</span>
-                        <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
-                    </div>
+                <div class="col-md-12">
+                    <img src="http://img.huainanren.net/2016/0129/20160129092645246.jpg" alt="用户照片"
+                         class="img-circle user-img-style">
                 </div>
-
-                <div class="col-md-6">
-                    <div class="input-group input-group-sm">
-                        <span class="input-group-addon" id="sizing-addon2">所属行业</span>
-                        <select name="industy" id="industy" class="form-control">
-                            <option value="sales">餐饮</option>
-                            <option value="manufactor">制造</option>
-                        </select>
-                    </div>
-                </div>
-
                 <div class="col-md-12 text-space">
-                    <h5>填写具体的岗位信息</h5>
-                    <textarea class="form-control" placeholder="岗位具体描述" rows="3"></textarea>
+                    <h3>金城武</h3>
                 </div>
-
-                <div class="col-md-12 text-space">
-                    <h5>介绍公司与团队</h5>
-                    <textarea class="form-control" placeholder="具体公司介绍" rows="3"></textarea>
-                </div>
-
-                <!--表格的大小设置为 6 个数字-->
-                <div class="col-md-6 text-space">
-                    <div class="input-group input-group-sm">
-                        <span class="input-group-addon" id="sizing-addon3">职位类型</span>
-                        <select name="industy" id="jobType" class="form-control">
-                            <option value="sales">全职</option>
-                            <option value="manufactor">兼职</option>
-                        </select>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
+
+    <!--基本信息-->
+    <div class="panel panel-default panel-sm">
+        <div class="panel-heading panel-heading-style">
+            联系方式
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3" style="text-align: right">
+                    名称
+                </div>
+                <div class="col-md-9">
+                    金城武
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 </body>

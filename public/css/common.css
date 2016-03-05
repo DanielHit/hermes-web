@@ -6,6 +6,10 @@
 
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 2%;
+    margin-top: 5%;
     text-align: center;
+}
+
+.panel-heading-style {
+    font-size: 15px; 
 }
