@@ -1,7 +1,7 @@
 $(function () {
     var $table = $('#table');
     $table.bootstrapTable({
-        url: 'application',
+        url: 'applicationJson',
         columns: [
             {
                 field: 'modified',
