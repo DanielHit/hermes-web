@@ -123,18 +123,27 @@
 </style>
 <script>
     $(function() {
-        $('.menu_main').on('mouseover', function() {
+        var hideTimeout;
+        $('.menu_main,.menu_sub').on('mouseover', function() {
             console.log('over')
             console.log($(this))
-            $(this).siblings(".menu_sub").show()
-        })
-        $('.menu_main').on('mouseout', function() {
-            $(this).parent().children(".menu_sub").hide();
+            $(this).addClass("current")
+            clearTimeout(hideTimeout)
+            console.log(hideTimeout)
+            $(this).parent().children(".menu_sub").show()
+        });
+        $('.menu_main,.menu_sub').on('mouseout', function() {
+            $(this).removeClass("current")
+            var this_menu = $(this).parent().children(".menu_sub");
+            hideTimeout = setTimeout(function() {
+                this_menu.hide();
+                console.log("timeout hide")
+            }, 100)
             console.log('out')
         })
     })
 </script>
-<div>
+<div class="sidebar">
     <div class="row" style="height: 1000px;">
         <div class="menu_main job_hopping col-md-3">
             <h2>
