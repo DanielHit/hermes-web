@@ -11,5 +11,27 @@
 }
 
 .panel-heading-style {
-    font-size: 15px; 
+    font-size: 15px;
 }
+
+.grid-cell {
+    flex: 1 0 0px;
+}
+
+.grid-cell-center {
+    align-self: center;
+}
+
+.fix-grid {
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.grid-grow-small {
+    flex-grow: 1;
+}
+
+
+
