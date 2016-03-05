@@ -9,7 +9,7 @@ router.get('/resume', function (req, res, next) {
     res.render('users/resume');
 });
 
-router.get('/delivery', function (req, res, next) {
+router.get('/application', function (req, res, next) {
     res.render('users/application');
 });
 
