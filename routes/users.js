@@ -10,10 +10,10 @@ router.get('/resume', function (req, res, next) {
 });
 
 router.get('/delivery', function (req, res, next) {
-    res.render('users/delivery');
+    res.render('users/application');
 });
 
-router.get('/deliveryJson', function (req, res, next) {
+router.get('/applicationJson', function (req, res, next) {
     var data = [
         {
             modified: '2015年1月1日',
