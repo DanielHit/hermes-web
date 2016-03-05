@@ -33,7 +33,7 @@ $(function () {
                 field: 'postTime',
                 title: '已投递时间',
                 sortable: true
-            },
+            }
         ]
     })
 })
