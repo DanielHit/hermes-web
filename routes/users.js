@@ -15,7 +15,11 @@ router.get('/application', function (req, res, next) {
 
 router.get('/applicationJson', function (req, res, next) {
     var data = new Array();
-    [1, 2, 3, 4, 5 , 6, 7, 8, 9].forEach(function(e) {
+    var list = new Array();
+    for(var i = 0; i < 100; i ++ ){
+        list.push(i);
+    }
+    list.forEach(function(e) {
         data.push({
             modified: '2015年1月' + (10 - e) + '日',
             job: '地推',

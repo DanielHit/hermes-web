@@ -2,6 +2,8 @@ $(function () {
     var $table = $('#table');
     $table.bootstrapTable({
         url: 'applicationJson',
+        search: "true",
+        pageSize: 10,
         columns: [
             {
                 field: 'modified',
