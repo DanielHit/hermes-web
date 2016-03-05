@@ -12,6 +12,12 @@ router.get('/index', function (req, res, next) {
     res.render("company/index");
 });
 
+router.get('/postjob', function (req, res, next) {
+    res.render("company/postjob");
+});
+
+
+
 
 
 module.exports = router;
