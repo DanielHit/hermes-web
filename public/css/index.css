@@ -122,3 +122,16 @@ a {
     color: #f1463b;
 }
 
+ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+}
+
+.select-style {
+    padding-left: 10px;
+}
+
+.search-area-style {
+    padding-left: 0px;
+}

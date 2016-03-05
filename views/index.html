@@ -14,18 +14,15 @@
 <body>
 
 <div class="container-fluid">
-    <div class="row"
-         style="padding-top:3%; padding-left:0px; padding-bottom: 5px; border-bottom: solid 1.5px rgba(94, 94, 94, 0.28)">
-
-        <div class="col-md-3" style="; padding-top:5px; padding-bottom: 2px;">
-            <div class="col-md-6" style="padding-left: 0%">
-                <h3> 北 京
-                    <button class="btn btn-default btn-xs">切换城市</button>
-                </h3>
-            </div>
+    <div class="row">
+        <!--style="padding-top:3%; padding-left:0px; padding-bottom: 5px; border-bottom: solid 1.5px rgba(94, 94, 94, 0.28)"-->
+        <div class="col-md-3">
+            <h3> 北 京
+                <button class="btn btn-default btn-xs">切换城市</button>
+            </h3>
         </div>
 
-        <div class="col-md-9">
+        <div class="col-md-9 search-area-style inline-block">
             <form class="form-group"></form>
             <div class="form-group">
                 <div class="col-md-10">
@@ -38,7 +35,7 @@
         </div>
     </div>
 
-    <div class="row" style="padding-top: 3%">
+    <div class="row" style="padding-top: 20px">
         <div class="row">
             <div class="col-md-3" style="border-right: rgba(25, 27, 27, 0.34); background-color: transparent;">
                 <div class="row">
@@ -47,137 +44,57 @@
             </div>
 
             <div class="col-md-9">
-                <ul class="list-inline">
-                    工作地点:
-                    <li>海淀</li>
-                    <li>朝阳</li>
-                    <li>东城</li>
-                    <li>西城</li>
-                </ul>
-                <hr class="list-hr">
-                <ul class="list-inline">
-                    工作经验:
-                    <li>不限制</li>
-                    <li>1-2年</li>
-                    <li>3-5年</li>
-                    <li>5-10年</li>
-                    <li>10年以上</li>
-                </ul>
-                <hr class="list-hr">
-                <ul class="list-inline">
-                    薪资待遇:
-                    <li>无要求</li>
-                    <li>1000以下</li>
-                    <li>1000-2000</li>
-                    <li>2000-3000</li>
-                    <li>3000-5000</li>
-                    <li>5000-8000</li>
-                    <li>8000-12000</li>
-                    <li>12000以上</li>
-                </ul>
-                <hr class="list-hr">
-                <ul class="list-inline">
-                    发布时间:
-                    <li>一天以内</li>
-                    <li>3天以内</li>
-                    <li>一周以内</li>
-                    <li>15天以内</li>
-                    <li>30天以内</li>
-                </ul>
-                <hr class="list-hr">
+                <div class="select-sort-style">
+                    <div class="select-style">
+                        <ul class="list-inline">
+                            工作地点:
+                            <li>海淀</li>
+                            <li>朝阳</li>
+                            <li>东城</li>
+                            <li>西城</li>
+                        </ul>
+                        <hr class="list-hr">
+                        <ul class="list-inline">
+                            工作经验:
+                            <li>不限制</li>
+                            <li>1-2年</li>
+                            <li>3-5年</li>
+                            <li>5-10年</li>
+                            <li>10年以上</li>
+                        </ul>
+                        <hr class="list-hr">
+                        <ul class="list-inline">
+                            薪资待遇:
+                            <li>无要求</li>
+                            <li>1000以下</li>
+                            <li>1000-2000</li>
+                            <li>2000-3000</li>
+                            <li>3000-5000</li>
+                            <li>5000-8000</li>
+                            <li>8000-12000</li>
+                            <li>12000以上</li>
+                        </ul>
+                        <hr class="list-hr">
+                        <ul class="list-inline">
+                            发布时间:
+                            <li>一天以内</li>
+                            <li>3天以内</li>
+                            <li>一周以内</li>
+                            <li>15天以内</li>
+                            <li>30天以内</li>
+                        </ul>
+                        <hr class="list-hr">
+                    </div>
 
-                <div class="btn-group inline-block" role="group" aria-label="...">
-                    <button type="button" class="btn btn-default btn-sm active">默认</button>
-                    <button type="button" class="btn btn-default btn-sm">工资</button>
-                    <button type="button" class="btn btn-default btn-sm">发布最新</button>
-                    <button type="button" class="btn btn-default btn-sm">投递数</button>
-                </div>
-                <!--职位列表-->
-                <div class="list-group" style="padding-top: 20px">
-
-                    <a href="/jd?id=123" class="list-group-item">
-                        <h4 class="list-group-item-heading">酒店服务员
-                            <small>3000-5000</small>
-                        </h4>
-                        <p class="list-group-item-text" style="padding-top: 3px">包吃包住,非常便宜</p>
-                    </a>
-
-                    <a href="/jd?id=12345" class="list-group-item">
-                        <h4 class="list-group-item-heading">快递员
-                            <small>5000-6000</small>
-                        </h4>
-                        <p class="list-group-item-text" style="padding-top: 3px">美团公司直招外卖快递员</p>
-                    </a>
-
-                    <a href="/jd?id=12345" class="list-group-item">
-                        <h4 class="list-group-item-heading">厨师
-                            <small>6000-8000</small>
-                        </h4>
-                        <p class="list-group-item-text" style="padding-top: 3px">好企业,提供厨师师傅的更好的平台</p>
-                    </a>
+                    <div class="btn-group inline-block" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default btn-sm active">默认</button>
+                        <button type="button" class="btn btn-default btn-sm">工资</button>
+                        <button type="button" class="btn btn-default btn-sm">发布最新</button>
+                        <button type="button" class="btn btn-default btn-sm">投递数</button>
+                    </div>
                 </div>
 
-                <div class="paging-nav">
-                    <a class="btn btn-default back disabled">
-                        <div class="btn-wrapper">
-                            <div class="label-block">
-                                <<
-                            </div>
-                        </div>
-                    </a>
-
-                    <a class="btn btn-primary gotoPage" id="page-1">
-                        <div class="btn-wrapper">
-                            <div class="label-block">
-                                1
-                            </div>
-                        </div>
-                    </a>
-
-                    <a class="btn btn-default gotoPage" id="page-2">
-                        <div class="btn-wrapper">
-                            <div class="label-block">
-                                2
-                            </div>
-                        </div>
-                    </a>
-
-                    <a class="btn btn-default gotoPage" id="page-3">
-                        <div class="btn-wrapper">
-                            <div class="label-block">
-                                3
-                            </div>
-                        </div>
-                    </a>
-                    <a class="btn btn-default gotoPage" id="page-4">
-                        <div class="btn-wrapper">
-                            <div class="label-block">
-                                4
-                            </div>
-                        </div>
-                    </a>
-                    <a class="btn disabled" id="ellipsis">
-                        <div class="btn-wrapper">
-                            <div class="label-block">
-                                ...
-                            </div>
-                        </div>
-                    </a>
-                    <a class="btn btn-default gotoPage" id="page-32">
-                        <div class="btn-wrapper">
-                            <div class="label-block">
-                                32
-                            </div>
-                        </div>
-                    </a>
-                    <a class="btn btn-default forward">
-                        <div class="btn-wrapper">
-                            <div class="label-block">
-                                >>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                {% include "joblist.html" %}
             </div>
 
         </div>
