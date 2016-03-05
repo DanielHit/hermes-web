@@ -14,23 +14,28 @@
 <body>
 
 <div class="container" style="padding-top: 10%">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
         <form class="form-signin">
-            <p class="form-signin-heading" style="text-align: left; font-size: 25px ;border-bottom: 1px solid #e6e6e6; margin-bottom: 20px">输入信息</p>
-            <label for="inputEmail" class="sr-only">邮箱地址</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="邮箱地址" required="" autofocus="">
+            <!--<p class="form-signin-heading" style="text-align: left; font-size: 25px ;border-bottom: 1px solid #e6e6e6; margin-bottom: 20px">输入信息</p>-->
+            <label for="inputMobile" class="sr-only">手机号</label>
+            <input type="text" id="inputMobile" class="form-control" placeholder="手机号" required="" autofocus="">
             <label for="inputPassword" class="sr-only">密 码</label>
             <input type="password" id="inputPassword" class="form-control" placeholder="密码" required="">
-            <div class="checkbox">
+            <div class="checkbox col-xs-8">
                 <label>
                     <input type="checkbox" value="remember-me"> 记住我
                 </label>
+                <a href="/#forget" style="">忘记密码</a>
             </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">登 录</button>
+
+            <div class="col-md-12" style="text-align: center; padding-top: 10px">
+                还没有账号?  <a href="/register"><ins style="">立即注册</ins> </a>
+            </div>
         </form>
     </div>
-    <div class="col-md-3"></div>
+    <div class="col-md-4"></div>
 </div>
 </body>
 </html>
