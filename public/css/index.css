@@ -100,3 +100,25 @@ a {
     overflow: hidden;
     border-radius: 4px;
 }
+
+.list-hr {
+    margin-top: 10px;
+}
+
+.F-glob {
+    font-family: global-iconfont;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.content__cell .label i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #f1463b;
+}
+
