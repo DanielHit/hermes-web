@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>闪电聘</title>
+    <link href="/css/company/position.css" rel="stylesheet">
+    <link href="/css/company/dashboard.css" rel="stylesheet">
+    {% include "../header.html" %}
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        {% include "sideBar.html" %}
+
+        <div class="col-md-9">
+            <div class="position-tab">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="#">在线岗位</a></li>
+                    <li role="presentation"><a href="#">审核岗位</a></li>
+                    <li role="presentation"><a href="#">未通过审核</a></li>
+                    <li role="presentation"><a href="#">下线岗位</a></li>
+                </ul>
+            </div>
+            <div class="panel panel-default panel-sm">
+                <!--<div class="panel-heading">-->
+                    <!--销售工程师-->
+                <!--</div>-->
+                <!--<div class="panel-body">-->
+                    <!--20k-40k 待遇大大的好-->
+                <!--</div>-->
+                <div class="table-responsive">
+                    <table class="table">
+                        <tr>
+                            <td>投递时间</td>
+                            <td>岗位名称</td>
+                            <td>薪资范围</td>
+                            <td>关键词</td>
+                            <td>投递数</td>
+                        </tr>
+                        <tr>
+                            <td>2015-10-01</td>
+                            <td>销售技术工程师</td>
+                            <td>2000-4000</td>
+                            <td>薪资待遇好</td>
+                            <td>34</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

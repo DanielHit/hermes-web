@@ -16,8 +16,12 @@ router.get('/postjob', function (req, res, next) {
     res.render("company/postjob");
 });
 
+router.get('/resume', function (req, res, next) {
+    res.render("company/resume");
+});
 
-
-
+router.get('/position', function (req, res, next) {
+    res.render("company/position");
+});
 
 module.exports = router;
