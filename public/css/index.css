@@ -141,6 +141,11 @@ i.select-icon-style {
     margin-right: 3px;
 }
 
+i.sort-icon-style {
+    color: #333;
+    margin-left: 3px;
+}
+
 span.select-name {
     color: #999;
 }
