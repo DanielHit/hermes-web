@@ -135,3 +135,12 @@ ul {
 .search-area-style {
     padding-left: 0px;
 }
+
+i.select-icon-style {
+    color: #337ab7;
+    margin-right: 3px;
+}
+
+span.select-name {
+    color: #999;
+}
