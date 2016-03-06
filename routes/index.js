@@ -2,6 +2,11 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res, next) {
+    var mobileAgentRegex = /(android|iphone|ipad)/i;
+    if (mobileAgentRegex.test(req.header('user-agent'))) {
+        res.render('customList');
+        return
+    }
     res.render('index', {title: '闪电聘'});
 });
 
@@ -22,6 +27,10 @@ router.get('/jd', function (req, res, next) {
     res.render('jd');
 });
 
+/* i版列表 */
+router.get('/custom/list', function (req, res, next) {
+    res.render('customList')
+})
 
 router.get('/test', function (req, res, next) {
     res.render('test');
