@@ -62,5 +62,9 @@ app.use(function (err, req, res, next) {
 });
 
 
+// 进入路由控制
+var routers = require('./lib/routerController')(app);
+
+
 module.exports = app;
 
