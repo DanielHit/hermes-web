@@ -1,5 +1,9 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express'),
+    router = express.Router(),
+    http = require('http'),
+    proxy = require('../lib/httpHandler'),
+    router = express.Router(),
+    domain = "127.0.0.1:8080/api/";
 
 router.get('/', function (req, res, next) {
     var mobileAgentRegex = /(android|iphone|ipad)/i;
@@ -30,10 +34,6 @@ router.get('/jd', function (req, res, next) {
 /* i版列表 */
 router.get('/custom/list', function (req, res, next) {
     res.render('customList')
-})
-
-router.get('/test', function (req, res, next) {
-    res.render('test');
 });
 
 router.get('/postjob', function (req, res, next) {

@@ -27,10 +27,10 @@
             <form class="form-group"></form>
             <div class="form-group">
                 <div class="col-md-10">
-                    <input type="input" class="form-control input-lg" id="inputPassword3" placeholder="如: 销售 北京 ">
+                    <input type="text" class="form-control input-lg" id="searchKeyWord" placeholder="如: 销售 北京 ">
                 </div>
                 <div class="col-md-2">
-                    <button type="submit" class="btn btn-primary btn-lg"><i class="icon-search"></i>
+                    <button type="submit" class="btn btn-primary btn-lg" id="jobListSearchButton"><i class="icon-search"></i>
                         搜 索
                     </button>
                 </div>
@@ -89,18 +89,18 @@
 
                         <!--todo 思考是否要加上薪资待遇-->
                         <!--<div>-->
-                            <!--<ul class="list-inline">-->
-                                <!--<i class="icon-yen select-icon-style"></i>-->
-                                <!--<span class="select-name">薪资待遇</span>-->
-                                <!--<li>无要求</li>-->
-                                <!--<li>1000以下</li>-->
-                                <!--<li>1000-2000</li>-->
-                                <!--<li>2000-3000</li>-->
-                                <!--<li>3000-5000</li>-->
-                                <!--<li>5000-8000</li>-->
-                                <!--<li>8000-12000</li>-->
-                                <!--<li>12000以上</li>-->
-                            <!--</ul>-->
+                        <!--<ul class="list-inline">-->
+                        <!--<i class="icon-yen select-icon-style"></i>-->
+                        <!--<span class="select-name">薪资待遇</span>-->
+                        <!--<li>无要求</li>-->
+                        <!--<li>1000以下</li>-->
+                        <!--<li>1000-2000</li>-->
+                        <!--<li>2000-3000</li>-->
+                        <!--<li>3000-5000</li>-->
+                        <!--<li>5000-8000</li>-->
+                        <!--<li>8000-12000</li>-->
+                        <!--<li>12000以上</li>-->
+                        <!--</ul>-->
                         <!--</div>-->
                         <div>
                             <ul class="list-inline">
@@ -140,6 +140,7 @@
 </div>
 
 <script src="/js/sidebar.js"></script>
+<script src="/js/list.js"></script>
 {% include "footer.html" %}
 </body>
 </html>

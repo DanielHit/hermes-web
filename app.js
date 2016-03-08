@@ -10,6 +10,7 @@ var cons = require('consolidate');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var company = require('./routes/company');
+var api = require('./routes/api');
 
 var app = express();
 
@@ -29,6 +30,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/company', company);
+app.use('/api',api);
+
+var routers = require('./lib/routerController')(app);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -36,8 +40,6 @@ app.use(function (req, res, next) {
     err.status = 404;
     next(err);
 });
-
-// error handlers
 
 // development error handler
 // will print stacktrace
@@ -61,10 +63,7 @@ app.use(function (err, req, res, next) {
     });
 });
 
-
 // 进入路由控制
-var routers = require('./lib/routerController')(app);
-
 
 module.exports = app;
 
