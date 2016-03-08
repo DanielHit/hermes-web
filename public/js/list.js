@@ -8,7 +8,6 @@ function bindEvent() {
     $('#jobListSearchButton').on('click', getJobList);
 }
 
-
 function getJobList() {
     var util = new httpGet();
     var cityId = 1;
@@ -65,7 +64,6 @@ function getJobList() {
         alert(err.result.message);
     });
 };
-
 
 // todo 通过requireJs 放到 公共模块 ajax httpGet异步请求
 function httpGet() {
