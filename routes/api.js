@@ -13,8 +13,12 @@ router.get('/list/', function (req, res) {
     proxy.httpHanlder(domain, req, res, 'jobList/getJobList');
 });
 
-router.get('/jobdetail/getjobdesc/', function (req, res) {
+router.get('/jobdetail/getjobdesc', function (req, res) {
     proxy.httpHanlder(domain, req, res, 'jobdetail/getjobdesc');
+});
+
+router.get('/jobdetail/applyJob', function (req, res) {
+    proxy.httpHanlder(domain, req, res, 'jobdetail/applyJob');
 });
 
 

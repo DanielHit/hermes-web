@@ -40,4 +40,9 @@ router.get('/postjob', function (req, res, next) {
     res.render('postjob');
 });
 
+router.get('/test', function (req, res, next) {
+    res.render('test', {title: '闪电聘'});
+});
+
+
 module.exports = router;

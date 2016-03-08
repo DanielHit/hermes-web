@@ -49,8 +49,7 @@ function getJobList() {
                 </div>
                 <div class="col-md-2">
                     <div class="list-item-img">
-                        <img src="https://d1du115wj2d9xz.cloudfront.net/api/file/8sJYOo1ySoGAr51dmZdU/convert?rotate=exif&w=120&h=70&fit=crop&align=center&format=jpeg&quality=65"
-                             alt="">
+                        <img src="${jobTitleList[i].imgUrl}" alt="defaultPic">
                     </div>
                 </div>
             </div>
