@@ -33,11 +33,7 @@ function getJobList() {
     }).done(function (res) {
         var html = "";
         var jobTitleList = res.data.jobList;
-        console.log(jobTitleList);
-
         for (var i = 0; i < jobTitleList.length; i++) {
-
-            console.log(jobTitleList[i]);
 
             html += `<a href='/jd?id=${jobTitleList[i].jobId}' class='list-group-item'>
             <div class='row'>
@@ -63,9 +59,7 @@ function getJobList() {
         `;
         }
 
-        console.log(html);
         $('#jobListTable').html(html);
-
     }).fail(function (err) {
         console.log("error");
         alert(err.result.message);
