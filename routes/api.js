@@ -1,7 +1,6 @@
 /**
  *  ajax调用异步后台请求转发
  */
-
 var express = require('express'),
     router = express.Router(),
     http = require('http'),
@@ -11,7 +10,7 @@ var express = require('express'),
 
 
 router.get('/list/', function (req, res) {
-    proxy.httpHanlder(domain, req, res, '/index/');
+    proxy.httpHanlder(domain, req, res, 'jobList/getJobList');
 });
 
 module.exports = router;
