@@ -24,7 +24,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="input-group input-group-sm">
-                                <span class="input-group-addon" id="sizing-addon1">职位名称</span>
+                                <span class="input-group-addon">职位名称</span>
                                 <input id="jobName" type="text" class="form-control" placeholder=""
                                        aria-describedby="sizing-addon1">
                             </div>
@@ -60,8 +60,8 @@
                             <div class="input-group input-group-sm">
                                 <span class="input-group-addon" id="sizing-addon3">职位类型</span>
                                 <select name="industy" id="jobType" class="form-control">
-                                    <option value="sales">全职</option>
-                                    <option value="manufactor">兼职</option>
+                                    <option value="0">全职</option>
+                                    <option value="1">兼职</option>
                                 </select>
                             </div>
                         </div>
@@ -80,23 +80,23 @@
                         <div class="col-md-6">
                             <h5>范围</h5>
                             <select type="text" class="form-control" id="salary">
-                                <option value="">1000元以下</option>
-                                <option value="">1000-2000</option>
-                                <option value="">2000-3000</option>
-                                <option value="">3000-5000</option>
-                                <option value="">5000-8000</option>
-                                <option value="">8000-12000</option>
-                                <option value="">12000-20000</option>
-                                <option value="">20000-25000</option>
-                                <option value="">25000以上</option>
+                                <option value="1">1000元以下</option>
+                                <option value="2">1000-2000</option>
+                                <option value="3">2000-3000</option>
+                                <option value="4">3000-5000</option>
+                                <option value="5">5000-8000</option>
+                                <option value="6">8000-12000</option>
+                                <option value="7">12000-20000</option>
+                                <option value="8">20000-25000</option>
+                                <option value="9">25000以上</option>
                             </select>
                         </div>
                         <div class="col-md-6">
                             <h5>计费方式</h5>
                             <select type="text" class="form-control" id="salaryType">
-                                <option value="">月薪</option>
-                                <option value="">日结</option>
-                                <option value="">时薪</option>
+                                <option value="0">月薪</option>
+                                <option value="1">日结</option>
+                                <option value="2">时薪</option>
                             </select>
                         </div>
                     </div>
@@ -163,17 +163,17 @@
                             <div class="col-md-6">
                                 <h5>范围</h5>
                                 <select type="text" class="form-control" id="cityId">
-                                    <option value="">北京</option>
-                                    <option value="">上海</option>
-                                    <option value="">天津</option>
+                                    <option value="1">北京</option>
+                                    <option value="2">上海</option>
+                                    <option value="3">天津</option>
                                 </select>
                             </div>
                             <div class="col-md-6">
                                 <h5>区域</h5>
                                 <select type="text" class="form-control" id="areaId">
-                                    <option value="">朝阳</option>
-                                    <option value="">望京</option>
-                                    <option value="">天通苑</option>
+                                    <option value="123">朝阳</option>
+                                    <option value="124">望京</option>
+                                    <option value="125">天通苑</option>
                                 </select>
                             </div>
                         </div>
@@ -214,13 +214,13 @@
             <!--提交-->
             <div class="panel panel-default panel-sm">
                 <div class="panel-body">
-                    <button class="btn btn-success">发布</button>
-                    <button class="btn btn-danger">删除</button>
+                    <button class="btn btn-success" id="applyJobButton">发布</button>
+                    <button class="btn btn-danger" id="cancelInputButton">删除</button>
                 </div>
             </div>
         </div>
     </div>
-
+    <script src="/js/users/postJob.js"></script>
 </div>
 </body>
 </html>
