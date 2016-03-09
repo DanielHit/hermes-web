@@ -30,7 +30,8 @@
                     <input type="text" class="form-control input-lg" id="searchKeyWord" placeholder="如: 销售 北京 ">
                 </div>
                 <div class="col-md-2">
-                    <button type="submit" class="btn btn-primary btn-lg" id="jobListSearchButton"><i class="icon-search"></i>
+                    <button type="submit" class="btn btn-primary btn-lg" id="jobListSearchButton"><i
+                            class="icon-search"></i>
                         搜 索
                     </button>
                 </div>
@@ -49,6 +50,7 @@
             <div class="col-md-9">
                 <div class="select-sort-style">
                     <div class="select-style">
+
                         <div>
                             <ul class="list-inline">
                                 <i class="icon-map-marker select-icon-style">
@@ -61,15 +63,16 @@
                             </ul>
                             <hr class="list-hr">
                         </div>
+
                         <div>
                             <ul class="list-inline">
-                                <i class="icon-plus select-icon-style"></i>
-                                <span class="select-name">工作经验</span>
-                                <li>不限制</li>
-                                <li>1-2年</li>
-                                <li>3-5年</li>
-                                <li>5-10年</li>
-                                <li>10年以上</li>
+                                <i class="icon-time select-icon-style"></i>
+                                <span class="select-name">发布时间</span>
+                                <li>1天以内</li>
+                                <li>5天以内</li>
+                                <li>10天以内</li>
+                                <li>15天以内</li>
+                                <li>20天以内</li>
                             </ul>
                             <hr class="list-hr">
                         </div>
@@ -77,15 +80,39 @@
                         <div>
                             <ul class="list-inline">
                                 <i class="icon-time select-icon-style"></i>
-                                <span class="select-name">学历要求</span>
-                                <li>不限</li>
-                                <li>初中</li>
-                                <li>高中</li>
-                                <li>本科</li>
-                                <li>研究生</li>
+                                <span class="select-name">工作类型</span>
+                                <li>全职</li>
+                                <li>兼职</li>
                             </ul>
                             <hr class="list-hr">
                         </div>
+
+
+                        <!--todo 蓝领工作对于经验要求应该不高-->
+                        <!--<div>-->
+                        <!--<ul class="list-inline">-->
+                        <!--<i class="icon-plus select-icon-style"></i>-->
+                        <!--<span class="select-name">工作经验</span>-->
+                        <!--<li>不限制</li>-->
+                        <!--<li>1-2年</li>-->
+                        <!--<li>3-5年</li>-->
+                        <!--<li>5-10年</li>-->
+                        <!--<li>10年以上</li>-->
+                        <!--</ul>-->
+                        <!--<hr class="list-hr">-->
+                        <!--</div>-->
+                        <!--<div>-->
+                        <!--<ul class="list-inline">-->
+                        <!--<i class="icon-time select-icon-style"></i>-->
+                        <!--<span class="select-name">学历要求</span>-->
+                        <!--<li>不限</li>-->
+                        <!--<li>初中</li>-->
+                        <!--<li>高中</li>-->
+                        <!--<li>本科</li>-->
+                        <!--<li>研究生</li>-->
+                        <!--</ul>-->
+                        <!--<hr class="list-hr">-->
+                        <!--</div>-->
 
                         <!--todo 思考是否要加上薪资待遇-->
                         <!--<div>-->
@@ -102,31 +129,23 @@
                         <!--<li>12000以上</li>-->
                         <!--</ul>-->
                         <!--</div>-->
-                        <div>
-                            <ul class="list-inline">
-                                <i class="icon-time select-icon-style"></i>
-                                <span class="select-name">发布时间</span>
-                                <li>一天以内</li>
-                                <li>3天以内</li>
-                                <li>一周以内</li>
-                                <li>15天以内</li>
-                                <li>30天以内</li>
-                            </ul>
-                            <hr class="list-hr">
-                        </div>
                     </div>
 
                     <div class="btn-group inline-block" role="group" aria-label="...">
                         <button type="button" class="btn btn-default btn-sm active">默认</button>
                         <button type="button" class="btn btn-default btn-sm">
-                            工资<i class="icon-long-arrow-down sort-icon-style"></i>
+                            工资最高<i class="icon-long-arrow-down sort-icon-style"></i>
                         </button>
                         <button type="button" class="btn btn-default btn-sm">发布最新
                             <i class="icon-long-arrow-down sort-icon-style"></i>
                         </button>
-                        <button type="button" class="btn btn-default btn-sm">投递数
+                        <!--<button type="button" class="btn btn-default btn-sm">投递数-->
+                            <!--<i class="icon-long-arrow-down sort-icon-style"></i>-->
+                        <!--</button>-->
+                        <button type="button" class="btn btn-default btn-sm">离我最近
                             <i class="icon-long-arrow-down sort-icon-style"></i>
                         </button>
+
                     </div>
                 </div>
 

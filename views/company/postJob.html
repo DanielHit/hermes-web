@@ -25,28 +25,35 @@
                         <div class="col-md-6">
                             <div class="input-group input-group-sm">
                                 <span class="input-group-addon" id="sizing-addon1">职位名称</span>
-                                <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+                                <input id="jobName" type="text" class="form-control" placeholder=""
+                                       aria-describedby="sizing-addon1">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="input-group input-group-sm">
                                 <span class="input-group-addon" id="sizing-addon2">所属行业</span>
-                                <select name="industy" id="industy" class="form-control">
-                                    <option value="sales">餐饮</option>
-                                    <option value="manufactor">制造</option>
+                                <select id="cateId" name="industy" id="industy" class="form-control">
+                                    <option value="1">餐饮</option>
+                                    <option value="2">酒店旅游</option>
+                                    <option value="3">销售</option>
+                                    <option value="4">客服</option>
+                                    <option value="5">家政</option>
+                                    <option value="6">制造</option>
+                                    <option value="7">建筑</option>
+                                    <option value="7">休闲娱乐</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="col-md-12 text-space">
                             <h5>填写具体的岗位信息</h5>
-                            <textarea class="form-control" placeholder="岗位具体描述" rows="3"></textarea>
+                            <input class="form-control" id="jobContent" placeholder="岗位具体描述" rows="3"/>
                         </div>
 
                         <div class="col-md-12 text-space">
                             <h5>介绍公司与团队</h5>
-                            <textarea class="form-control" placeholder="具体公司介绍" rows="3"></textarea>
+                            <input type="text" class="form-control" placeholder="具体公司介绍" rows="3" id="companyDesc"/>
                         </div>
 
                         <div class="col-md-6 text-space">
@@ -72,7 +79,7 @@
                     <div class="form-group">
                         <div class="col-md-6">
                             <h5>范围</h5>
-                            <select type="text" class="form-control" id="exampleInputName2">
+                            <select type="text" class="form-control" id="salary">
                                 <option value="">1000元以下</option>
                                 <option value="">1000-2000</option>
                                 <option value="">2000-3000</option>
@@ -86,7 +93,7 @@
                         </div>
                         <div class="col-md-6">
                             <h5>计费方式</h5>
-                            <select type="text" class="form-control" id="exampleInputName3">
+                            <select type="text" class="form-control" id="salaryType">
                                 <option value="">月薪</option>
                                 <option value="">日结</option>
                                 <option value="">时薪</option>
@@ -141,9 +148,6 @@
 
 
                     </div>
-                    <div class="col-md-12">
-
-                    </div>
                 </div>
                 <!--<div class="panel-footer">Panel footer</div>-->
             </div>
@@ -158,7 +162,7 @@
                         <div class="form-group">
                             <div class="col-md-6">
                                 <h5>范围</h5>
-                                <select type="text" class="form-control" id="">
+                                <select type="text" class="form-control" id="cityId">
                                     <option value="">北京</option>
                                     <option value="">上海</option>
                                     <option value="">天津</option>
@@ -166,7 +170,7 @@
                             </div>
                             <div class="col-md-6">
                                 <h5>区域</h5>
-                                <select type="text" class="form-control" id="">
+                                <select type="text" class="form-control" id="areaId">
                                     <option value="">朝阳</option>
                                     <option value="">望京</option>
                                     <option value="">天通苑</option>
@@ -178,13 +182,13 @@
             </div>
 
             <!--职位图片 todo 还未想好是否需要加上岗位图片信息-->
-            <!--<div class="panel panel-primary panel-sm">-->
-            <!--<div class="panel-heading">-->
-            <!--<h5>职位图片</h5>-->
-            <!--</div>-->
-            <!--<div class="map">-->
-            <!--</div>-->
-            <!--</div>-->
+            <div class="panel panel-primary panel-sm">
+                <div class="panel-heading">
+                    <h5>职位图片</h5>
+                </div>
+                <div class="map">
+                </div>
+            </div>
 
             <!--招聘负责人-->
             <div class="panel panel-default panel-sm">
@@ -193,15 +197,15 @@
                 </div>
                 <div class="panel-body" style="text-align:left">
                     <div class="form-group">
-                        <label for="exampleInputEmail1" class="text-space">姓名*</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
+                        <label class="text-space">姓名*</label>
+                        <input type="text" class="form-control" id="employerName" placeholder="">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1" class="text-space">职位*</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="人力总监">
+                        <label class="text-space">职位*</label>
+                        <input type="text" class="form-control" id="employerPosition" placeholder="人力总监">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1" class="text-space">电话*</label>
+                        <label class="text-space">电话*</label>
                         <input type="tel" class="form-control" id="phoneNum" placeholder="手机号">
                     </div>
                 </div>
