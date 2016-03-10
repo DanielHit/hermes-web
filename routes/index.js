@@ -1,9 +1,11 @@
 var express = require('express'),
-    router = express.Router(),
     http = require('http'),
-    proxy = require('../lib/httpHandler'),
     router = express.Router(),
-    domain = "127.0.0.1:8080/api/";
+    domain = "127.0.0.1:8080/api/",
+    qiniu = require('qiniu');
+
+var config = require('../public/js/config/qiniuconfig.js');
+
 
 router.get('/', function (req, res, next) {
     var mobileAgentRegex = /(android|iphone|ipad)/i;
@@ -43,6 +45,24 @@ router.get('/postjob', function (req, res, next) {
 router.get('/test', function (req, res, next) {
     res.render('test', {title: '闪电聘'});
 });
+
+
+qiniu.conf.ACCESS_KEY = config.ACCESS_KEY;
+qiniu.conf.SECRET_KEY = config.SECRET_KEY;
+var uptoken = new qiniu.rs.PutPolicy(config.Bucket_Name);
+
+router.get('/token', function(req, res, next) {
+    var token = uptoken.token();
+    res.header("Cache-Control", "max-age=0, private, must-revalidate");
+    res.header("Pragma", "no-cache");
+    res.header("Expires", 0);
+    if (token) {
+        res.json({
+            uptoken: token
+        });
+    }
+});
+
 
 
 module.exports = router;

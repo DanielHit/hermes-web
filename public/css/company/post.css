@@ -27,7 +27,50 @@
 }
 
 .post-panel-group {
-    padding-top:5px;
-    margin-left:0px;
-    padding-left:0px;
+    padding-top: 5px;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.section-component-navy {
+    background-color: #565A5C;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18px;
+}
+
+.section-component {
+    padding: 16px 0;
+    text-align: center;
+}
+
+.content-panel {
+    margin-top: 20px;
+    border-radius: 4ch;
+}
+
+.job-thumbnail {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    display: block;
+    background-position: -5px -8px;
+    border-radius: 4px;
+}
+
+.job-img-text {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.add-photo-section {
+    margin: 10px;
+    text-align: center;
+}
+
+.btn-add-photo {
+    width: 150px;
+    height: 30px;
 }
