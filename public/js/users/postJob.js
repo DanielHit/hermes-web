@@ -67,7 +67,7 @@ function submitJob() {
     var degree = $("#degree").val();
 
     // check the param format
-    if (!jobName.trim() || !companyDesc.trim() || jobContent.trim()) {
+    if (!jobName.trim() || !companyDesc.trim() || !jobContent.trim() || !address.trim()) {
         console.log("input wrong");
         return;
     }
