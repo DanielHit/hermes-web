@@ -3,7 +3,7 @@ var express = require('express'),
     router = express.Router(),
     qiniu = require('qiniu');
 
-var config = require('../public/js/config/qiniuconfig');
+var config = require('./qiniuConfig');
 
 
 router.get('/', function (req, res, next) {
@@ -48,6 +48,7 @@ router.get('/test', function (req, res, next) {
 
 qiniu.conf.ACCESS_KEY = config.ACCESS_KEY;
 qiniu.conf.SECRET_KEY = config.SECRET_KEY;
+
 var uptoken = new qiniu.rs.PutPolicy(config.Bucket_Name);
 
 router.get('/token', function(req, res, next) {
