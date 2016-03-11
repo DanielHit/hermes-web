@@ -8,7 +8,8 @@ function bindEvent() {
     $("#applyJobButton").on("click", submitJob);
 }
 
-$(document).ready(function () {
+
+function checkParam() {
 
     $("#contact-form").validate(
         {
@@ -39,11 +40,11 @@ $(document).ready(function () {
                     .closest('.control-group').removeClass('error').addClass('success');
             }
         });
-
-});
-
+}
 
 function submitJob() {
+    checkParam();
+
     var jobName = $("#jobName").val();
     var cateId = $("#cateId").val();
     var jobContent = $("#jobContent").val();
@@ -57,7 +58,6 @@ function submitJob() {
     var jobImg = $("#imgUploaded").attr('src');
     var experience = $("#experience").val();
 
-    //var box = $("input[type='checkbox']").val();
     var welfarBox = [];
     $('#box input:checked').each(function () {
         welfarBox.push(this.value);
@@ -65,6 +65,12 @@ function submitJob() {
     var welfare = welfarBox.toString();
     var userId = 12345; //todo mock -> 之后用户系统增加之后,切换到动态获取用户userId
     var degree = $("#degree").val();
+
+    // check the param format
+    if (!jobName.trim() || !companyDesc.trim() || jobContent.trim()) {
+        console.log("input wrong");
+        return;
+    }
 
     var postJobParam = {
         jobName,
@@ -85,7 +91,7 @@ function submitJob() {
     };
     console.log(postJobParam);
     var util = new httpGet();
-    console.log("enter here to post job");
+
     util.ajax({
         url: "/api/user/recruiter/postJob",
         type: "post",
