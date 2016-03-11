@@ -1,31 +1,49 @@
-/**
- * Created by Daniel on 3/9/16.
- */
-
-// todo add 图片信息
-var employerName = $("#employerName");
-var employerPosition = $("#employerPosition");
-var phoneNum = $("#phoneNum");
-
 init();
 
 function init() {
     bindEvent();
-}
+};
 
 function bindEvent() {
     $("#applyJobButton").on("click", submitJob);
 }
 
-function checkValidation() {
-    jQuery.validator.addMethod("isName", function (value, element) {
+$(document).ready(function () {
 
-    })
-};
+    $("#contact-form").validate(
+        {
+            rules: {
+                name: {
+                    minlength: 2,
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                subject: {
+                    minlength: 2,
+                    required: true
+                },
+                message: {
+                    minlength: 2,
+                    required: true
+                }
+            },
+            highlight: function (element) {
+                $(element).closest('.control-group').removeClass('success').addClass('error');
+            },
+            success: function (element) {
+                element
+                    .text('OK!').addClass('valid')
+                    .closest('.control-group').removeClass('error').addClass('success');
+            }
+        });
+
+});
+
 
 function submitJob() {
-    checkValidation();
-
     var jobName = $("#jobName").val();
     var cateId = $("#cateId").val();
     var jobContent = $("#jobContent").val();
@@ -36,29 +54,77 @@ function submitJob() {
     var cityId = $("#cityId").val();
     var areaId = $("#areaId").val();
     var address = $("#address").val();
-    var employerPosition = $("#employerPosition").val();
-    var phoneNum = $("#phoneNum").val();
-    var employerName = $("#employerName").val();
-    var imgUrl = $("#imgUploaded").attr('src');
+    var jobImg = $("#imgUploaded").attr('src');
+    var experience = $("#experience").val();
 
-    console.log(jobName);
-    console.log(cateId);
-    console.log(jobContent);
-    console.log(companyDesc);
-    console.log(jobType);
-    console.log(salary);
-    console.log(salaryType);
-    console.log(cityId);
-    console.log(areaId);
-    console.log(address);
-    console.log(employerPosition);
-    console.log(phoneNum);
-    console.log(employerName);
-    console.log(imgUrl);
+    //var box = $("input[type='checkbox']").val();
+    var welfarBox = [];
+    $('#box input:checked').each(function () {
+        welfarBox.push(this.value);
+    });
+    var welfare = welfarBox.toString();
+    var userId = 12345; //todo mock -> 之后用户系统增加之后,切换到动态获取用户userId
+    var degree = $("#degree").val();
 
-    // todo 1 增加校验
-
-    // todo 2 增加
-
+    var postJobParam = {
+        jobName,
+        cityId,
+        cateId,
+        areaId,
+        jobContent,
+        companyDesc,
+        jobType,
+        userId,
+        jobImg,
+        salary,
+        salaryType,
+        address,
+        welfare,
+        experience,
+        degree
+    };
+    console.log(postJobParam);
+    var util = new httpGet();
+    console.log("enter here to post job");
+    util.ajax({
+        url: "/api/user/recruiter/postJob",
+        type: "post",
+        dataGet: postJobParam
+    }).done(function (res) {
+        alert("提交岗位成功");
+    }).fail(function (err) {
+        console.log("error");
+        alert(err.result.message);
+    });
 }
+
+function httpGet() {
+    this.ajax = function (param) {
+        var def = $.Deferred();
+
+        if (param.dataGet) {
+            param.url = param.url + (~param.url.indexOf('?') ? '&' : '?') + $.param(param.dataGet);
+        }
+
+        var ajax = $.ajax({
+            url: param.url,
+            type: param.type || 'get',
+            dataType: 'json',
+            data: param.dataPost
+        }).done(function (res) {
+            if (res && res.status === 200) {
+                def.resolve(res)
+            }
+            else {
+                def.reject(res);
+            }
+        }).fail(function (e) {
+            def.reject(e);
+        });
+
+        var ret = def.promise();
+        ret.abort = ajax.abort;
+        return ret;
+    };
+};
 

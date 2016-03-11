@@ -1,3 +1,5 @@
+// 七牛云存储配置
+
 module.exports = {
     'ACCESS_KEY': 'vnkAPoMG1WYZB0V1edHKy8XqvjvUxx2vwt8qX6iZ',
     'SECRET_KEY': 'cXlFaBZo0enykzD0ns6DF3jhZzwiSNOkqlxs-mZQ',

@@ -64,7 +64,6 @@ function getJobList() {
     });
 };
 
-// todo 通过requireJs 放到 公共模块 ajax httpGet异步请求
 function httpGet() {
     this.ajax = function (param) {
         var def = $.Deferred();

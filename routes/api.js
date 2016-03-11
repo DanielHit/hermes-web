@@ -21,6 +21,10 @@ router.get('/jobdetail/applyJob', function (req, res) {
     proxy.httpHanlder(domain, req, res, 'jobdetail/applyJob');
 });
 
+router.post('/user/recruiter/postJob', function (req, res) {
+    console.log("enter proxy");
+    proxy.httpHanlder(domain, req, res, 'user/recruiter/postJob');
+});
 
 module.exports = router;
 
