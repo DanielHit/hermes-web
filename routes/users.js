@@ -32,9 +32,9 @@ router.get('/applicationJson', function (req, res, next) {
             status: '已投递',
             postTime: e + '天'
         })
-    })
+    });
     res.send(data)
-})
+});
 router.get('/boxJson', function (req, res, next) {
     var data = new Array();
     var list = new Array();
@@ -49,7 +49,7 @@ router.get('/boxJson', function (req, res, next) {
             status: '已投递',
             notifyTime: '2015年3月4日'
         })
-    })
+    });
     res.send(data)
-})
+});
 module.exports = router;

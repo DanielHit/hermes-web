@@ -11,9 +11,6 @@ source ~/.nvm/nvm.sh
 nvm install 5.0
 nvm use 5.0
 
-if [ ! -z $( npm list -g | grep pm2 ) ]; then
-  npm i pm2 -g
-fi
+npm install
 
-pm2 kill
-pm2 start app.js
+npm start app

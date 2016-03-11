@@ -15,14 +15,16 @@
 
 <body>
 <div class="container-fluid content-panel">
+
     <div class="row">
         <!--{% include "sideBar.html" %}-->
         <div class="post-panel-group">
+
+            <!--职位基本信息-->
             <div class="panel panel-default panel-sm ">
                 <div class=" section-component section-component-navy ">
                     <h5>职位描述</h5>
                 </div>
-
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-6">
@@ -152,7 +154,6 @@
 
                     </div>
                 </div>
-                <!--<div class="panel-footer">Panel footer</div>-->
             </div>
 
             <!--职位地址-->
@@ -188,6 +189,7 @@
                 </div>
             </div>
 
+            <!--图片信息-->
             <div class="panel panel-default panel-sm">
 
                 <div class="panel-heading">
@@ -207,8 +209,8 @@
                                 </a>
                             </div>
 
-                            <div id="pickfiles2" class="add-photo-section">
-                                <button class="btn btn-default btn-add-photo">添加图片</button>
+                            <div class="add-photo-section">
+                                <span class="btn btn-default btn-add-photo">添加图片</span>
                             </div>
                             <div>
                                 <img id="imgUploaded" style="width: 100px">
@@ -219,6 +221,7 @@
 
             </div>
 
+            <!--招聘负责人-->
             <div class="panel panel-default panel-sm">
                 <div class="panel-heading">
                     <h5>招聘负责人</h5>
@@ -228,7 +231,7 @@
                         <div class="user-avatar-wrapper small-medium">
                             <div class="user-avatar-inner">
                                 <img class="img-flag img-responsive-ie"
-                                src="https://d1du115wj2d9xz.cloudfront.net/api/file/oAbYvDTdaNwU389pWTBQ/convert?rotate=exif&amp;w=188&amp;h=188&amp;fit=crop&amp;align=center&amp;format=jpg&amp;quality=65"
+                                     src="https://d1du115wj2d9xz.cloudfront.net/api/file/oAbYvDTdaNwU389pWTBQ/convert?rotate=exif&amp;w=188&amp;h=188&amp;fit=crop&amp;align=center&amp;format=jpg&amp;quality=65"
                                 />
                             </div>
                         </div>
@@ -252,9 +255,9 @@
                     <button class="btn btn-danger" id="cancelInputButton">删除</button>
                 </div>
             </div>
+
         </div>
     </div>
-
 
     <script src="/js/users/postJob.js"></script>
     <script src="/js/component/uploadPic.js"></script>

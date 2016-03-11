@@ -17,7 +17,14 @@ function bindEvent() {
     $("#applyJobButton").on("click", submitJob);
 }
 
+function checkValidation() {
+    jQuery.validator.addMethod("isName", function (value, element) {
+
+    })
+};
+
 function submitJob() {
+    checkValidation();
 
     var jobName = $("#jobName").val();
     var cateId = $("#cateId").val();
@@ -48,6 +55,10 @@ function submitJob() {
     console.log(phoneNum);
     console.log(employerName);
     console.log(imgUrl);
+
+    // todo 1 增加校验
+
+    // todo 2 增加
 
 }
 

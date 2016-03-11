@@ -3,7 +3,7 @@ var express = require('express'),
     router = express.Router(),
     qiniu = require('qiniu');
 
-var config = require('../public/js/config/qiniuconfig.js');
+var config = require('../public/js/config/qiniuconfig');
 
 
 router.get('/', function (req, res, next) {
