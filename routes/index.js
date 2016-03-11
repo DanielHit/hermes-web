@@ -1,7 +1,6 @@
 var express = require('express'),
     http = require('http'),
     router = express.Router(),
-    domain = "127.0.0.1:8080/api/",
     qiniu = require('qiniu');
 
 var config = require('../public/js/config/qiniuconfig.js');
@@ -62,7 +61,5 @@ router.get('/token', function(req, res, next) {
         });
     }
 });
-
-
 
 module.exports = router;

@@ -4,5 +4,5 @@ module.exports = {
     'Bucket_Name': 'hermes-img-public',
     'Port': 19110,
     'Uptoken_Url': 'uptoken',
-    'Domain': 'http://qiniu-plupload.qiniudn.com/'
+    'Domain': 'http://7xrppw.com1.z0.glb.clouddn.com/'
 };

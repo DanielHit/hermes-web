@@ -1,105 +1,263 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<html lang="zh-CN">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-
-    <title>Plupload - Custom example</title>
-
-    <!-- production -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>闪电聘</title>
+    <link rel="stylesheet" href="/css/company/post.css">
+    <link href="/css/company/dashboard.css" rel="stylesheet">
     <script type="text/javascript" src="/js/lib/plupload.full.min.js"></script>
     <script type="text/javascript" src="/js/lib/qiniu.js"></script>
-
-    <!-- debug
-    <script type="text/javascript" src="../js/moxie.js"></script>
-    <script type="text/javascript" src="../js/plupload.dev.js"></script>
-    -->
-
+    <script type="text/javascript" src="/js/lib/jquery.min.js"></script>
+    {% include "../header.html" %}
 </head>
-<body style="font: 13px Verdana; background: #eee; color: #333">
 
-<h1>Custom example</h1>
+<body>
+<div class="container-fluid content-panel">
+    <div class="row">
+        <!--{% include "sideBar.html" %}-->
+        <div class="post-panel-group">
+            <div class="panel panel-default panel-sm ">
+                <div class=" section-component section-component-navy ">
+                    <h5>职位描述</h5>
+                </div>
 
-<p>Shows you how to use the core plupload API.</p>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon">职位名称</span>
+                                <input id="jobName" type="text" class="form-control" placeholder=""
+                                       aria-describedby="sizing-addon1">
+                            </div>
+                        </div>
 
-<div id="filelist">Your browser doesn't have Flash, Silverlight or HTML5 support.</div>
-<br/>
+                        <div class="col-md-6">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon" id="sizing-addon2">所属行业</span>
+                                <select id="cateId" name="industy" id="industy" class="form-control">
+                                    <option value="1">餐饮</option>
+                                    <option value="2">酒店旅游</option>
+                                    <option value="3">销售</option>
+                                    <option value="4">客服</option>
+                                    <option value="5">家政</option>
+                                    <option value="6">制造</option>
+                                    <option value="7">建筑</option>
+                                    <option value="7">休闲娱乐</option>
+                                </select>
+                            </div>
+                        </div>
 
-<div id="container">
-    <a id="pickfiles" href="javascript:;">[Select files]</a>
-    <a id="uploadfiles" href="javascript:;">[Upload files]</a>
+                        <div class="col-md-12 text-space">
+                            <h5>填写具体的岗位信息</h5>
+                            <input class="form-control" id="jobContent" placeholder="岗位具体描述" rows="3"/>
+                        </div>
+
+                        <div class="col-md-12 text-space">
+                            <h5>介绍公司与团队</h5>
+                            <input type="text" class="form-control" placeholder="具体公司介绍" rows="3" id="companyDesc"/>
+                        </div>
+
+                        <div class="col-md-6 text-space">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon" id="sizing-addon3">职位类型</span>
+                                <select name="industy" id="jobType" class="form-control">
+                                    <option value="0">全职</option>
+                                    <option value="1">兼职</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--职位福利待遇-->
+            <div class="panel panel-default panel-sm">
+                <div class="panel-heading">
+                    <h5>工资与福利</h5>
+                </div>
+                <div class="col-md-12 text-space">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <h5>范围</h5>
+                            <select type="text" class="form-control" id="salary">
+                                <option value="1">1000元以下</option>
+                                <option value="2">1000-2000</option>
+                                <option value="3">2000-3000</option>
+                                <option value="4">3000-5000</option>
+                                <option value="5">5000-8000</option>
+                                <option value="6">8000-12000</option>
+                                <option value="7">12000-20000</option>
+                                <option value="8">20000-25000</option>
+                                <option value="9">25000以上</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>计费方式</h5>
+                            <select type="text" class="form-control" id="salaryType">
+                                <option value="0">月薪</option>
+                                <option value="1">日结</option>
+                                <option value="2">时薪</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 style="text-align: left; padding-left: 30px">福利</h5>
+
+                        <label class="benefits-box">
+                            <input type="checkbox"> 五险一金
+                        </label>
+
+                        <label class="benefits-box">
+                            <input type="checkbox"> 周末双休
+                        </label>
+
+                        <label class="benefits-box">
+                            <input type="checkbox"> 包吃
+                        </label>
+
+                        <label class="benefits-box">
+                            <input type="checkbox"> 包住
+                        </label>
+                        <hr>
+                        <label class="benefits-box">
+                            <input type="checkbox"> 年底双薪
+                        </label>
+
+                        <label class="benefits-box">
+                            <input type="checkbox"> 交通补助
+                        </label>
+
+                        <label class="benefits-box">
+                            <input type="checkbox"> 加班补助
+                        </label>
+
+                        <label class="benefits-box">
+                            <input type="checkbox"> 饭补
+                        </label>
+
+                        <label class="benefits-box">
+                            <input type="checkbox"> 话补
+                        </label>
+
+                        <label class="benefits-box">
+                            <input type="checkbox"> 房补
+                        </label>
+
+
+                    </div>
+                </div>
+                <!--<div class="panel-footer">Panel footer</div>-->
+            </div>
+
+            <!--职位地址-->
+            <div class="panel panel-default panel-sm">
+                <div class="panel-heading">
+                    <h5>职位地址</h5>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-12 text-space">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <h5>城市</h5>
+                                <select type="text" class="form-control" id="cityId">
+                                    <option value="1">北京</option>
+                                    <option value="2">上海</option>
+                                    <option value="3">天津</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <h5>区域</h5>
+                                <select type="text" class="form-control" id="areaId">
+                                    <option value="123">朝阳</option>
+                                    <option value="124">望京</option>
+                                    <option value="125">天通苑</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <h5>地址</h5>
+                                <input type="text" class="form-control" id="address"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default panel-sm">
+
+                <div class="panel-heading">
+                    <h5>职位图片</h5>
+                </div>
+
+                <div class="panel-body">
+                    <div class="grid-cell ie-expand-grid-cell">
+                        <div class="job-img-text">
+                            <h5>添加公司 或者 产品的图片</h5>
+                        </div>
+                        <form style="text-align: center">
+                            <div id="container">
+                                <a id="pickfiles" href="javascript:;">
+                                    <!--<i class="icon-plus icon-4x"></i>-->
+                                    <i class="icon-plus-sign-alt icon-4x"></i>
+                                </a>
+                            </div>
+
+                            <div id="pickfiles2" class="add-photo-section">
+                                <button class="btn btn-default btn-add-photo">添加图片</button>
+                            </div>
+                            <div>
+                                <img id="imgUploaded" style="width: 100px">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="panel panel-default panel-sm">
+                <div class="panel-heading">
+                    <h5>招聘负责人</h5>
+                </div>
+                <div class="panel-body" style="text-align:left">
+                    <div class="user-avatar">
+                        <div class="user-avatar-wrapper small-medium">
+                            <div class="user-avatar-inner">
+                                <img class="img-flag img-responsive-ie"
+                                src="https://d1du115wj2d9xz.cloudfront.net/api/file/oAbYvDTdaNwU389pWTBQ/convert?rotate=exif&amp;w=188&amp;h=188&amp;fit=crop&amp;align=center&amp;format=jpg&amp;quality=65"
+                                />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="hire-name">
+                        <div>
+                            王二虎
+                        </div>
+                        <div>
+                            销售经理
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--提交-->
+            <div class="panel panel-default panel-sm">
+                <div class="panel-body">
+                    <button class="btn btn-success" id="applyJobButton">发布</button>
+                    <button class="btn btn-danger" id="cancelInputButton">删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/js/users/postJob.js"></script>
+    <script src="/js/component/uploadPic.js"></script>
 </div>
-
-<br/>
-<pre id="console"></pre>
-
-
-<script type="text/javascript">
-
-    var uploader = Qiniu.uploader({
-        runtimes: 'html5,flash,html4',    //上传模式,依次退化
-        browse_button: 'pickfiles',       //上传选择的点选按钮，**必需**
-        uptoken_url: '/token',
-        //Ajax请求upToken的Url，**强烈建议设置**（服务端提供）
-        // uptoken : '<Your upload token>',
-        //若未指定uptoken_url,则必须指定 uptoken ,uptoken由其他程序生成
-        // unique_names: true,
-        // 默认 false，key为文件名。若开启该选项，SDK会为每个文件自动生成key（文件名）
-        // save_key: true,
-        // 默认 false。若在服务端生成uptoken的上传策略中指定了 `sava_key`，则开启，SDK在前端将不对key进行任何处理
-        domain: 'http://qiniu-plupload.qiniudn.com/',
-        //bucket 域名，下载资源时用到，**必需**
-        container: 'container',           //上传区域DOM ID，默认是browser_button的父元素，
-        max_file_size: '100mb',           //最大文件体积限制
-        flash_swf_url: 'js/plupload/Moxie.swf',  //引入flash,相对路径
-        max_retries: 3,                   //上传失败最大重试次数
-        dragdrop: true,                   //开启可拖曳上传
-        drop_element: 'container',        //拖曳上传区域元素的ID，拖曳文件或文件夹后可触发上传
-        chunk_size: '4mb',                //分块上传时，每片的体积
-        auto_start: true,                 //选择文件后自动上传，若关闭需要自己绑定事件触发上传
-        init: {
-            'FilesAdded': function (up, files) {
-                plupload.each(files, function (file) {
-                    // 文件添加进队列后,处理相关的事情
-                });
-            },
-            'BeforeUpload': function (up, file) {
-                // 每个文件上传前,处理相关的事情
-            },
-            'UploadProgress': function (up, file) {
-                // 每个文件上传时,处理相关的事情
-            },
-            'FileUploaded': function (up, file, info) {
-                // 每个文件上传成功后,处理相关的事情
-                // 其中 info 是文件上传成功后，服务端返回的json，形式如
-                // {
-                //    "hash": "Fh8xVqod2MQ1mocfI4S4KpRL6D98",
-                //    "key": "gogopher.jpg"
-                //  }
-                // 参考http://developer.qiniu.com/docs/v6/api/overview/up/response/simple-response.html
-                var domain = up.getOption('domain');
-                var res = parseJSON(info);
-                var sourceLink = domain + res.key;
-                获取上传成功后的文件的Url
-            },
-            'Error': function (up, err, errTip) {
-                //上传出错时,处理相关的事情
-                console.log("upload error");
-            },
-            'UploadComplete': function () {
-                //队列文件处理完毕后,处理相关的事情
-                console.log("done");
-            },
-            'Key': function (up, file) {
-                // 若想在前端对每个文件的key进行个性化处理，可以配置该函数
-                // 该配置必须要在 unique_names: false , save_key: false 时才生效
-                var key = "";
-                // do something with key here
-                return key
-            }
-        }
-    });
-    uploader.init();
-
-</script>
 </body>
 </html>
