@@ -1,6 +1,20 @@
-/**
- * Created by Daniel on 3/5/16.
- */
-require("../../public/js/lib/jquery.min.js");
+init();
 
-$('#datetimepicker').datetimepicker('show');
+function init() {
+    console.log("hello");
+    bindEvent();
+}
+
+function bindEvent() {
+    //$("#datetimepicker").datepicker();
+}
+
+
+$(function () {
+    $('#datetimepicker4').datetimepicker({
+        format: 'YYYY/MM/DD',
+        minDate: {
+            Default:true
+        }
+    });
+});

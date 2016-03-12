@@ -10,7 +10,6 @@ function bindEvent() {
 
 
 function checkParam() {
-
     $("#contact-form").validate(
         {
             rules: {

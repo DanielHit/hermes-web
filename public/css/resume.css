@@ -3,3 +3,29 @@
     width: 120px;
     height: 120px;
 }
+
+.edit-icon-style {
+    margin-right: 0%;
+    padding-right: 0%;
+}
+
+.date-form {
+    margin: 10px;
+}
+
+label.control-label span {
+    cursor: pointer;
+}
+
+.work-input-style {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.change-img-button {
+    color: grey;
+    position: absolute;
+    padding-left:55%;
+    margin-top:-3.5%;
+
+}
