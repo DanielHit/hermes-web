@@ -19,7 +19,13 @@ function loadUserInfo() {
         console.log("load resume info success");
         var result = res.data;
         console.log(result);
-        $("#userId").attr("src", result.userImg);
+        $("#userImg").attr("src", result.userImg);
+        $("#phoneNum").html(result.phoneNum);
+        $("#address").html(result.address);
+        $("#education").val(result.educationContent);
+        $("#workContent").val(result.workContent);
+        $("#startWork").html(result.startDate);
+
     }).fail(function (err) {
         console.log("error");
     });

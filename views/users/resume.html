@@ -27,7 +27,7 @@
             <div>
                 <div>
                     <div class="col-md-12">
-                        <img src="http://img.huainanren.net/2016/0129/20160129092645246.jpg" alt="用户照片"
+                        <img src="" alt="用户照片"
                              class="img-circle user-img-style" id="userImg">
                     </div>
 
@@ -48,20 +48,17 @@
             联系方式
             <span class="icon-edit edit-icon-style"></span>
         </div>
-        <div class="panel-body">
-            <div>
-                <div class="col-md-6">
-                    <div class=" grid-cell form-inline">
-                        <i class="icon-mobile-phone icon-2x"></i>
-                        <input type="tel" class="form-control" value="18610027435" id="phoneNum">
-                    </div>
-                </div>
-            </div>
-
+        <div class="panel-body" style="text-align: center">
             <div class="col-md-6">
                 <div class=" grid-cell form-inline">
+                    <i class="icon-mobile-phone icon-2x"></i>
+                    <span id="phoneNum"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class=" grid-cell form-inline ">
                     <i class="icon-home icon-2x"></i>
-                    <input type="text" class="form-control" value="北京市朝阳区宏昌路1号望京西园二区201号楼二单元301房间" id="address">
+                    <span class="" id="address"></span>
                 </div>
 
             </div>
@@ -87,7 +84,7 @@
             </div>
 
             <div>
-                <textarea id="workContent" class="form-control" rows="3" placeholder="具体的工作情况"></textarea>
+                <textarea readonly id="workContent" class="form-control" rows="3" placeholder="具体的工作情况"></textarea>
             </div>
         </div>
     </div>
@@ -110,7 +107,7 @@
             </div>
 
             <div>
-                <textarea id="education" name="education" class="form-control" rows="3"
+                <textarea readonly id="education" name="education" class="form-control" rows="3"
                           placeholder="具体的工作情况"></textarea>
             </div>
         </div>
@@ -123,29 +120,21 @@
             <span class="icon-edit edit-icon-style"></span>
         </div>
 
-        <div class="panel panel-body">
+        <div class="panel panel-body" style="text-align: center">
             <div class="col-md-6">
                 <div class="input-group input-group-sm">
-                    <span class="input-group-addon" id="start-work">可工作时间</span>
-                    <input type='text' class="form-control" id='datetimepicker'/>
+                    <h5>上岗日期  </h5>
+                    <i class="icon-time"></i>
+                    <span id="startWork"></span>
                 </div>
             </div>
 
             <div class="col-md-6">
-                <div class="input-group input-group-sm">
-                    <span class="input-group-addon" id="sizing-addon2">关注行业</span>
-                    <select id="cateId" name="industy" id="industy" class="form-control">
-                        <option value="1">餐饮</option>
-                        <option value="2">酒店旅游</option>
-                        <option value="3">销售</option>
-                        <option value="4">客服</option>
-                        <option value="5">家政</option>
-                        <option value="6">制造</option>
-                        <option value="7">建筑</option>
-                        <option value="7">休闲娱乐</option>
-                    </select>
-                </div>
+                <h5>关注行业</h5>
+                <i class="icon-star"></i>
+                <span id="cateName">品类</span>
             </div>
+
         </div>
     </div>
 
@@ -155,7 +144,7 @@
             <div class="col-md-3">
             </div>
             <div class="col-md-6">
-                <button class="btn btn-primary" id="editButton"> 修改 </button>
+                <button class="btn btn-primary btn-lg" id="editButton"> 修改</button>
             </div>
             <div class="col-md-3">
             </div>
