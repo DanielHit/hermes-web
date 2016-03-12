@@ -11,7 +11,6 @@ function bindEvent() {
     $("#applyJobButton").on('click', applyJob);
 }
 
-
 function applyJob() {
 
     //todo  目前先用固定的用户,等后期加上用户模块

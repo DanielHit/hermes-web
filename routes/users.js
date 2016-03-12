@@ -9,6 +9,10 @@ router.get('/resume', function (req, res, next) {
     res.render('users/resume');
 });
 
+router.get('/editResume', function (req, res, next) {
+    res.render('users/editResume');
+});
+
 router.get('/application', function (req, res, next) {
     res.render('users/application');
 });

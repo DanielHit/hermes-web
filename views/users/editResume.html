@@ -28,13 +28,17 @@
                 <div>
                     <div class="col-md-12">
                         <img src="http://img.huainanren.net/2016/0129/20160129092645246.jpg" alt="用户照片"
-                             class="img-circle user-img-style" id="userImg">
+                             class="img-circle user-img-style" id="imgUploaded">
+
+                        <div id="container" class="change-img-button">
+                            <a id="pickfiles" href="javascript:;">
+                                <i class="icon-plus-sign-alt icon-2x"></i>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="col-md-12 text-space">
-
                         <h3> 金城武 </h3>
-
                     </div>
                 </div>
 
@@ -155,7 +159,8 @@
             <div class="col-md-3">
             </div>
             <div class="col-md-6">
-                <button class="btn btn-primary" id="editButton"> 修改 </button>
+                <button class="btn btn-primary" id="editButton"> 提交修改</button>
+                <button class="btn btn-danger" id="cancelButton"> 撤销修改</button>
             </div>
             <div class="col-md-3">
             </div>
@@ -164,7 +169,7 @@
 
 </div>
 
-<script src="/js/users/resume.js"></script>
+<script src="/js/resume.js"></script>
 <script src="/js/component/uploadPic.js"></script>
 </body>
 </html>
