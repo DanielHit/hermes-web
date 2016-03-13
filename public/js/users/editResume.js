@@ -4,6 +4,7 @@ var degree = 0;
 
 function init() {
     bindEvent();
+    loadResume();
 }
 
 function bindEvent() {
@@ -23,6 +24,33 @@ $('#workYear .btn').on("click", function () {
     console.log(workYear);
     $(this).addClass("active");
 });
+
+function loadResume() {
+
+    var userId = getUrlParam("userId");
+    var util = new httpGet();
+    var param = {userId};
+    util.ajax({
+        url: "/api/user/candidate/getResume",
+        type: "get",
+        dataGet: param
+    }).done(function (res) {
+        console.log("load resume info success");
+        var result = res.data;
+        console.log(result);
+        $("#imgUploaded").attr("src", result.userImg);
+        $("#phoneNum").html(result.phoneNum);
+        $("#address").html(result.address);
+        $("#education").val(result.educationContent);
+        $("#workContent").val(result.workContent);
+        $("#datetimepicker").val(result.startDate);
+        $("#cateId").html(result.cateId);
+
+    }).fail(function (err) {
+        console.log("error");
+    });
+
+}
 
 function postEditResume() {
     var userId = 12345;
@@ -90,3 +118,9 @@ function httpGet() {
     };
 };
 
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+    if (r != null) return unescape(r[2]);
+    return null; //返回参数值
+}
