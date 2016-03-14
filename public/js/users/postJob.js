@@ -8,8 +8,8 @@ function bindEvent() {
     $("#applyJobButton").on("click", submitJob);
 }
 
-
 function checkParam() {
+
     $("#contact-form").validate(
         {
             rules: {
@@ -131,5 +131,5 @@ function httpGet() {
         ret.abort = ajax.abort;
         return ret;
     };
-};
+}
 

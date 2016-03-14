@@ -37,6 +37,11 @@ router.get('/user/candidate/getResume', function (req, res) {
     proxy.httpHanlder(domain, req, res, 'user/candidate/getResume');
 });
 
+router.get('/user/application/list', function (req, res) {
+    console.log("enter here");
+    proxy.httpHanlder(domain, req, res, 'user/application/list?userId=100012');
+});
+
 module.exports = router;
 
 

@@ -1,20 +1,22 @@
 $(function () {
     var $table = $('#table');
+
     $table.bootstrapTable({
-        url: 'applicationJson',
+        //todo 文档: http://bootstrap-table.wenzhixin.net.cn/documentation/
+        url: '/api/user/application/list?userId=100012',
         search: "true",
         pageSize: 10,
         columns: [
             {
-                field: 'modified',
+                field: 'date',
                 title: '修改日期',
                 sortable: true
             }, {
-                field: 'job',
+                field: 'jobName',
                 title: '职位',
                 sortable: true
             }, {
-                field: 'recruiter',
+                field: 'hireManager',
                 title: '招聘人员',
                 sortable: true
             }, {
@@ -22,15 +24,11 @@ $(function () {
                 title: '公司',
                 sortable: true
             }, {
-                field: 'progress',
+                field: 'stage',
                 title: '进度',
                 sortable: true
             }, {
-                field: 'status',
-                title: '状态',
-                sortable: true
-            }, {
-                field: 'postTime',
+                field: 'days',
                 title: '已投递时间',
                 sortable: true
             }
