@@ -26,7 +26,7 @@ $(function () {
             }, {
                 field: 'stage',
                 title: '进度',
-                sortable: truez
+                sortable: true
             }, {
                 field: 'days',
                 title: '已投递时间',
