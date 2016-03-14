@@ -16,7 +16,7 @@ $(function () {
                 sortable: true
             },
             {
-                field: 'date',
+                field: 'editDate',
                 title: '更新日期',
                 sortable: true
             }, {
@@ -30,8 +30,13 @@ $(function () {
             }, {
                 field: 'stage',
                 title: '操作',
-                sortable: false
+                sortable: false,
+                titleTooltip: "查看 编辑 下架"
             }
         ]
     })
+});
+
+$(".nav-tabs").on("click", function(){
+    console.log("被点击了");
 });

@@ -2,6 +2,8 @@ init();
 
 function init() {
     bindEvent();
+    console.log("get list");
+    getJobList();
 }
 
 function bindEvent() {
