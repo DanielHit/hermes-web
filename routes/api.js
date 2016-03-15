@@ -45,6 +45,10 @@ router.get('/user/recruiter/getPostJobList', function (req, res) {
     proxy.httpHanlder(domain, req, res, 'user/recruiter/getPostJobList');
 });
 
+router.get('/user/recruiter/getPostResume', function (req, res) {
+    proxy.httpHanlder(domain, req, res, 'user/recruiter/getPostResume');
+});
+
 module.exports = router;
 
 
