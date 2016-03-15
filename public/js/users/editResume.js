@@ -1,3 +1,4 @@
+
 init();
 var workYear = 0;
 var degree = 0;

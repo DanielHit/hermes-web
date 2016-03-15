@@ -9,14 +9,13 @@
     <link href="/css/company/dashboard.css" rel="stylesheet">
     {% include "../header.html" %}
 </head>
-
 <body>
+
 <div class="container-fluid">
     <div class="row">
+
         {% include "sideBar.html" %}
-
         <div class="col-md-9">
-
             <div class="position-tab">
                 <ul class="nav nav-tabs">
                     <li role="presentation" class="active"><a href="#">待筛选简历</a></li>
@@ -27,52 +26,20 @@
                 </ul>
             </div>
 
-            <div class="panel panel-default panel-sm">
-                <div class="table-responsive">
-                    <table class="table">
-                        <tr class="active">
-                            <td>投递时间</td>
-                            <td>姓名</td>
-                            <td>性别</td>
-                            <td>年龄</td>
-                            <td>教育背景</td>
-                            <td>操作</td>
-                        </tr>
-                        <tr>
-                            <td>2015-10-01</td>
-                            <td>张三</td>
-                            <td>男</td>
-                            <td>38</td>
-                            <td>
-                                本科
-                            </td>
-                            <td>
-                                <a href="">查看</a>
-                                <a href="">邀请</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2015-10-01</td>
-                            <td>张三</td>
-                            <td>男</td>
-                            <td>38</td>
-                            <td>
-                                本科
-                            </td>
-                            <td>
-                                <a href="">查看</a>
-                                <a href="">邀请</a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
+            <div>
+                <table class="table table-striped table-bordered table-hover" id="table"
+                       data-pagination="true"
+                       data-show-refresh="true">
+                </table>
             </div>
-
         </div>
 
     </div>
-
 </div>
+
+<script src="/js/lib/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/company/resumemanage.js"></script>
+
 </body>
 </html>
