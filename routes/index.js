@@ -12,11 +12,11 @@ router.get('/', function (req, res, next) {
         res.render('customList');
         return
     }
-    res.render('index', {title: '闪电聘'});
+    res.render('index', {title: '小马工作'});
 });
 
 router.get('/index', function (req, res, next) {
-    res.render('index', {title: '闪电聘'});
+    res.render('index', {title: '小马工作'});
 });
 
 router.get('/login', function (req, res, next) {
