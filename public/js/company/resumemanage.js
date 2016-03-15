@@ -1,3 +1,7 @@
+var selections = [];
+var $table = $('#table');
+
+
 $(function () {
     var $table = $('#table');
     $table.bootstrapTable({
@@ -8,7 +12,16 @@ $(function () {
             userId: 12345
         },
         method: 'get',
+        responseHandler: responseHandler,
+        detailView:true,
         columns: [
+            {
+                field: 'state',
+                title: '选中',
+                checkbox: true,
+                align: 'center',
+                valign: 'middle'
+            },
             {
                 field: 'resumeId',
                 title: '简历标号',
@@ -36,12 +49,6 @@ $(function () {
                 align: 'center',
                 events: operateEvents,
                 formatter: operateFormatter
-            }, {
-                field: 'operate',
-                title: '选中',
-                checkbox: true,
-                align: 'center',
-                valign: 'middle'
             }
         ]
     })
@@ -49,11 +56,14 @@ $(function () {
 
 function operateFormatter(value, row, index) {
     return [
-        '<a class="like" href="javascript:void(0)" title="Like">',
-        '<i class="glyphicon glyphicon-heart"></i>',
+        '<a class="view col-md-4" href="javascript:void(0)" title="Like">',
+        '<i class="glyphicon glyphicon-heart"></i> 筛选查看',
         '</a>  ',
-        '<a class="remove" href="javascript:void(0)" title="Remove">',
-        '<i class="glyphicon glyphicon-remove"></i>',
+        '<a class="ok col-md-4" href="javascript:void(0)" title="Remove">',
+        '<i class=" glyphicon glyphicon-ok"></i> 邀请面试',
+
+        '<a class="remove col-md-4" href="javascript:void(0)" title="Remove">',
+        '<i class="glyphicon glyphicon-remove"></i> 不合适',
         '</a>'
     ].join('');
 }
@@ -69,3 +79,21 @@ window.operateEvents = {
         });
     }
 };
+
+function responseHandler(res) {
+    console.log("hello world");
+    //$.each(res.rows, function (i, row) {
+    //    row.state = $.inArray(row.id, selections) !== -1;
+    //});
+    return res;
+}
+
+function detailFormatter(index, row) {
+    var html = [];
+    $.each(row, function (key, value) {
+        html.push('<p><b>' + key + ':</b> ' + value + '</p>');
+    });
+    return html.join('');
+}
+
+
