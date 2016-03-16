@@ -9,6 +9,8 @@
     <script type="text/javascript" src="/js/lib/plupload.full.min.js"></script>
     <script type="text/javascript" src="/js/lib/qiniu.js"></script>
     <script type="text/javascript" src="/js/lib/jquery.min.js"></script>
+    <script src="/js/lib/jquery.validate.min.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
     {% include "../header.html" %}
 </head>
 
@@ -17,8 +19,8 @@
 <div class="container-fluid">
     <div class="row">
         <!--{% include "sideBar.html" %}-->
-        <!--<form action="" id="contact-form">-->
-        <!--</form>-->
+        <form action="" id="contact-form">
+        </form>
         {% include "sideBar.html" %}
         <div class="col-md-9 post-content-style">
             <!--职位基本信息-->
@@ -304,8 +306,6 @@
 
         </div>
     </div>
-    <script src="/js/lib/jquery.validate.min.js"></script>
-    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
     <script src="/js/users/postJob.js"></script>
     <script src="/js/component/uploadPic.js"></script>
 </div>
