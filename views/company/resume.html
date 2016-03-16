@@ -15,11 +15,12 @@
 
         {% include "sideBar.html" %}
         <div class="col-md-9">
+
             <div class="position-tab">
                 <ul class="nav nav-tabs">
-                    <li role="presentation" class="active"><a href="#">待筛选简历</a></li>
-                    <li role="presentation"><a href="#">已邀请简历</a></li>
-                    <li role="presentation"><a href="#">不合适简历</a></li>
+                    <li role="presentation"  class="active" id="wait"><a href="#">待筛选简历</a></li>
+                    <li role="presentation" id="success"><a href="#">已邀请简历</a></li>
+                    <li role="presentation" id="refuse"><a href="#">不合适简历</a></li>
                 </ul>
             </div>
 
@@ -39,8 +40,8 @@
                        data-show-refresh="true">
                 </table>
             </div>
-        </div>
 
+        </div>
     </div>
 </div>
 <script src="/js/lib/bootstrap-table.min.js"></script>

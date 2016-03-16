@@ -1,4 +1,3 @@
-
 var $table = $("#table");
 
 $(function () {
@@ -66,3 +65,9 @@ window.operateEvents = {
         });
     }
 };
+
+$("li").click(function () {
+    $(this).addClass("active");
+    $(this).siblings("li").removeClass("active");
+});
+

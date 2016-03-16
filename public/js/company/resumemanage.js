@@ -14,7 +14,7 @@ $(function () {
         },
         method: 'get',
         responseHandler: responseHandler,
-        detailView:true,
+        detailView: true,
         columns: [
             {
                 field: 'state',
@@ -131,4 +131,23 @@ $invite.click(function () {
     });
     $remove.prop('disabled', true);
 });
+
+$("li").click(function () {
+    $(this).addClass("active");
+    $(this).siblings("li").removeClass("active");
+
+    var refreshParam;
+
+    if ($(this).attr("id") === "wait") {
+        refreshParam = {query: {userId: '12345', stage: 0}};
+    } else if ($(this).attr("id") === "success") {
+        refreshParam = {query: {userId: '12345', stage: 1}};
+    } else {
+        refreshParam = {query: {userId: '12345', stage: 2}};
+    }
+
+    $('#table').bootstrapTable('refresh', refreshParam);
+
+});
+
 

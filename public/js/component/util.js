@@ -19,14 +19,14 @@ module.exports = {
             type: param.type || 'get',
             dataType: 'json',
             data: param.dataPost
-        }).done(function(res) {
-            if (res && res.result.code===0) {
+        }).done(function (res) {
+            if (res && res.result.code === 0) {       // code==0代表进行解析数据
                 def.resolve(res)
             }
             else {
                 def.reject(res);
             }
-        }).fail(function(e) {
+        }).fail(function (e) {
             def.reject(e);
         });
 
