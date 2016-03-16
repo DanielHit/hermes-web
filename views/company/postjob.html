@@ -13,21 +13,17 @@
 </head>
 
 <body>
-<div class="container-fluid content-panel">
 
-    {% include "sideBar.html" %}
-
+<div class="container-fluid">
     <div class="row">
         <!--{% include "sideBar.html" %}-->
-        <form action="" id="contact-form">
-
-
-        </form>
-        <div class="post-panel-group">
-
+        <!--<form action="" id="contact-form">-->
+        <!--</form>-->
+        {% include "sideBar.html" %}
+        <div class="col-md-9 post-content-style">
             <!--职位基本信息-->
             <div class="panel panel-default panel-sm ">
-                <div class=" section-component section-component-navy ">
+                <div class="panel-heading">
                     <h5>职位描述</h5>
                 </div>
                 <div class="panel-body">
@@ -307,7 +303,6 @@
             </div>
 
         </div>
-
     </div>
     <script src="/js/lib/jquery.validate.min.js"></script>
     <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>

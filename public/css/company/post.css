@@ -11,8 +11,8 @@
 }
 
 .panel-sm {
-    margin-left: 18%;
-    margin-right: 20%;
+    margin-left: 20px;
+    margin-right: 12%;
 }
 
 .text-space {
@@ -88,4 +88,12 @@ label.error {
     color: red;
     padding: 2px 8px;
     margin-top: 2px;
+}
+
+.post-content-style{
+    margin-top: 20px;
+}
+
+div.panel-heading{
+    text-align: center;
 }

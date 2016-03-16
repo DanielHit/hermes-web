@@ -82,7 +82,6 @@ window.operateEvents = {
 };
 
 function responseHandler(res) {
-    console.log("hello world");
     //$.each(res.rows, function (i, row) {
     //    row.state = $.inArray(row.id, selections) !== -1;
     //});
