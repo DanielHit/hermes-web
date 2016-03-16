@@ -1,4 +1,15 @@
-//$('.nav-sidebar').on('click', 'li', function () {
-//    $('.nav-sidebar li.active').removeClass('active');
-//    $(this).addClass('active');
-//});
+
+$('.list-group').on('click', 'li', function () {
+    console.log("xxx");
+
+    //$('.list-group li.active').removeClass('active');
+    //var href = $(location).attr('href');
+
+    //console.log(href);
+    //if(href.contains("resume")){
+    //    console.log("xxxx2");
+
+    //$(this).addClass('active');
+
+});
+
