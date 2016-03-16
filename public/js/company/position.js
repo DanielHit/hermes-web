@@ -2,13 +2,13 @@ var $table = $("#table");
 
 $(function () {
     var $table = $('#table');
-
     $table.bootstrapTable({
         url: '/api/user/recruiter/getPostJobList',
         search: "true",
         pageSize: 10,
         queryParams: {
-            userId: 100012
+            userId: 12345,
+            stage: 1
         },
         method: 'get',
         columns: [
@@ -41,15 +41,16 @@ $(function () {
 });
 
 function operateFormatter(value, row, index) {
+    // todo 不同样式展示不同
     return [
         '<a class="view col-md-4" href="javascript:void(0)" title="Like">',
-        '<i class="glyphicon glyphicon-new-window"></i> 详细简历',
+        '<i class="glyphicon glyphicon-new-window"></i> 查看',
         '</a>  ',
         '<a class="ok col-md-4" href="javascript:void(0)" title="Remove">',
-        '<i class=" glyphicon glyphicon-ok"></i> 邀请面试',
+        '<i class=" glyphicon glyphicon-ok"></i> 编辑',
 
         '<a class="remove col-md-4" href="javascript:void(0)" title="Remove">',
-        '<i class="glyphicon glyphicon-remove"></i> 不合适',
+        '<i class="glyphicon glyphicon-remove"></i> 下线',
         '</a>'
     ].join('');
 }
@@ -69,5 +70,21 @@ window.operateEvents = {
 $("li").click(function () {
     $(this).addClass("active");
     $(this).siblings("li").removeClass("active");
+});
+
+$("li").click(function () {
+
+    $(this).addClass("active");
+    $(this).siblings("li").removeClass("active");
+
+    var refreshParam;
+    if ($(this).attr("id") === "online") {
+        refreshParam = {query: {userId: '12345', stage: 1}};
+    } else if ($(this).attr("id") === "offline") {
+        refreshParam = {query: {userId: '12345', stage: 0}};
+    }
+
+    $('#table').bootstrapTable('refresh', refreshParam);
+
 });
 
