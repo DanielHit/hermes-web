@@ -159,15 +159,15 @@ window.operateEvents = {
             dataGet: param,
             type: "post"
         }).done(function (res) {
+            $table.bootstrapTable('remove', {
+                field: 'applicationId',
+                values: [row.applicationId]
+            });
             console.log("ok");
         }).fail(function (err) {
             console.log("ff");
         });
 
-        $table.bootstrapTable('remove', {
-            field: 'applicationId',
-            values: [row.applicationId]
-        });
 
     },
 

@@ -53,6 +53,10 @@ router.post('/user/recruiter/handleResume', function (req, res) {
     proxy.httpHanlder(domain, req, res, 'user/recruiter/handleResume');
 });
 
+router.post('/user/recruiter/handlePostJob', function (req, res) {
+    proxy.httpHanlder(domain, req, res, 'user/recruiter/handlePostJob');
+});
+
 module.exports = router;
 
 
